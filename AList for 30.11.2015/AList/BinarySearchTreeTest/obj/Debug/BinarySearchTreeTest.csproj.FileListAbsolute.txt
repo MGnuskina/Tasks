@@ -1,0 +1,9 @@
+C:\Tasks\AList for 30.11.2015\AList\BinarySearchTreeTest\bin\Debug\BinarySearchTreeTest.dll
+C:\Tasks\AList for 30.11.2015\AList\BinarySearchTreeTest\bin\Debug\BinarySearchTreeTest.pdb
+C:\Tasks\AList for 30.11.2015\AList\BinarySearchTreeTest\bin\Debug\Binary Search Tree Project.exe
+C:\Tasks\AList for 30.11.2015\AList\BinarySearchTreeTest\bin\Debug\nunit.framework.dll
+C:\Tasks\AList for 30.11.2015\AList\BinarySearchTreeTest\bin\Debug\Binary Search Tree Project.pdb
+C:\Tasks\AList for 30.11.2015\AList\BinarySearchTreeTest\bin\Debug\nunit.framework.xml
+C:\Tasks\AList for 30.11.2015\AList\BinarySearchTreeTest\obj\Debug\BinarySearchTreeTest.csprojResolveAssemblyReference.cache
+C:\Tasks\AList for 30.11.2015\AList\BinarySearchTreeTest\obj\Debug\BinarySearchTreeTest.dll
+C:\Tasks\AList for 30.11.2015\AList\BinarySearchTreeTest\obj\Debug\BinarySearchTreeTest.pdb

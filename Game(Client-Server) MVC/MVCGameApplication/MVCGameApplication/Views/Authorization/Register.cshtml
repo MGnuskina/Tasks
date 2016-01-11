@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutOnLogIn.cshtml";
+}
+
+<body>
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p>Register</p>
+        </footer>
+    </div>
+
+    @model MVCGameApplication.Models.UserRegisterViewModel
+
+
+    @using (Html.BeginForm("Register", "Authorization", FormMethod.Post))
+    {
+        <div>
+            @Html.LabelFor(x => x.Name)
+            @Html.EditorFor(x => x.Name)
+        </div>
+
+        <div>
+            @Html.LabelFor(x => x.Password)
+            @Html.EditorFor(x => x.Password)
+        </div>
+
+        <div>
+            @Html.LabelFor(x => x.PasswordAgain)
+            @Html.EditorFor(x => x.PasswordAgain)
+        </div>
+
+        <div>
+            <input type="submit" value="Register" />
+        </div>
+        @ViewBag.Error
+        @Html.ValidationSummary()
+    }
+
+</body>
+

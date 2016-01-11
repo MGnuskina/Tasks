@@ -1,0 +1,52 @@
+﻿
+@model MVCGameApplication.Models.GameRequestViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutOnLogIn.cshtml";
+}
+
+<body>
+    <h2 style="align-self:center"></h2>
+    <div id="chatBody">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td valign="top" style="border-width:2px; border-color:Black ; border-style :groove ;" width="600px" height="300px">
+                        <h4>Profile</h4>
+                        <h5>User name:</h5>
+                        <ul id="userName"></ul>
+                    </td>
+                    <td valign="top" style="border-width:2px; border-color:Black ; border-style :groove ;" width="600px" height="300px">
+                        <form id="formU">
+                            <h4>Users</h4>
+                            <ul id="discussion"></ul>
+                        </form>
+                        <input type="text" id="name" hidden value=@Model.UserName />
+                        @Html.HiddenFor(x => x.UserName) 
+                        @Html.HiddenFor(x => x.UserPassword)
+                        <input type="text" id="Password" hidden value=@Model.UserPassword />
+                        <input id="hdId" type="hidden" />
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" style="border-width:2px; border-color:Black ; border-style :groove ;" width="600px" height="300px"><h4>Rates</h4></td>
+                    <td valign="top" style="border-width:2px; border-color:Black ; border-style :groove ;" width="600px" height="300px">
+                        <h4>Games</h4>
+                        @Html.DropDownListFor(m => m.GameName, new List<SelectListItem> {
+                        new SelectListItem { Value = "Tick_Tack_Toe", Text = "Tick Tack Toe" },
+                        new SelectListItem { Value = "Numbers", Text = "Numbers" },
+                        }, new { @class = "form-control" })
+                        <input type="submit" id="startGame" value="Start" />
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+    @section scripts {
+        <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+        <script src="~/signalr/hubs"></script>
+        <script src="~/Scripts/ShowUsers.js"></script>
+    }
+</body>

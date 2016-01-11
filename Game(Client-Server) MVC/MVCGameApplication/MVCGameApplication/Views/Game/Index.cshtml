@@ -1,0 +1,56 @@
+﻿@model MVCGameApplication.Models.GameViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    @*@using (Html.BeginForm("Index", "Game", FormMethod.Post))
+        {*@
+    <h3>@Model.Title</h3>
+    <canvas id="drawCanvas" width="800px" height="800px" style="border:solid" onclick="GameClick(window.event)"></canvas>
+    <input type="text" hidden id="clickedX" />
+    <input type="text" hidden id="clickedY" />
+    @*<input type="submit" hidden id="play" value="Play" />*@
+    <form id="gameForm"></form>
+    <input type="text" id="name" hidden value=@Model.User.Name />
+    <input type="text" id="Password" hidden value=@Model.User.Password />
+    @Html.Hidden("gameM", Model.Game)
+    @Html.HiddenFor(x => x.drawSize)
+    @Html.HiddenFor(x => x.Title)
+    @Html.HiddenFor(x => x.pointFrom)
+    @Html.HiddenFor(x => x.pointsTo)
+</body>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(Draw());
+
+    function Draw() {
+        if (@Model.clickedPointX==0 && @Model.clickedPointY==0)
+        {
+            var startPoint = @Html.Raw(Json.Encode(Model.pointFrom));
+            var finishPoint = @Html.Raw(Json.Encode(Model.pointsTo));
+
+            var c = document.getElementById("drawCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            for (var i = 0; i < @Model.pointFrom.Count; i++) {
+                ctx.moveTo(startPoint[i][0], startPoint[i][1]);
+                ctx.lineTo(finishPoint[i][0], finishPoint[i][1]);
+                ctx.stroke();
+            }
+        }
+    }
+
+    function GameClick(e) {
+        $("#clickedX").val = e.pageX - e.target.offsetLeft;
+        $("#clickedY").val = e.pageY - e.target.offsetTop;
+        //$("#play").click();/////??
+    }
+
+</script>
+<script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+<script src="~/signalr/hubs"></script>
+<script src="~/Scripts/ShowGame.js"></script>

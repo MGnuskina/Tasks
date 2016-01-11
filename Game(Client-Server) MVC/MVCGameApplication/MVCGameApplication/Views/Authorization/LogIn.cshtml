@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "LogIn";
+    Layout = "~/Views/Shared/_LayoutOnLogIn.cshtml";
+}
+
+<body>
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p>Log in to start playing</p>
+        </footer>
+    </div>
+
+    @model MVCGameApplication.Models.UserLogInViewModel
+
+
+    @using (Html.BeginForm("LogIn", "Authorization", FormMethod.Post))
+    {
+        <div>
+            @Html.LabelFor(x => x.Name)
+            @Html.EditorFor(x => x.Name)
+        </div>
+
+        <div>
+            @Html.LabelFor(x => x.Password)
+            @Html.EditorFor(x => x.Password)
+        </div>
+
+        <div>
+            <input type="submit" value="Log in" />
+        </div>
+        @ViewBag.Error;
+        @Html.ValidationSummary()
+    }
+
+</body>

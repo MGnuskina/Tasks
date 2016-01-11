@@ -1,0 +1,15 @@
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Autorization\bin\Debug\Autorization.dll
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Autorization\bin\Debug\Autorization.pdb
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Autorization\obj\Debug\Autorization.dll
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Autorization\obj\Debug\Autorization.pdb
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\Autorization\bin\Debug\Autorization.dll
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\Autorization\bin\Debug\Autorization.pdb
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\Autorization\obj\Debug\Autorization.csprojResolveAssemblyReference.cache
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\Autorization\obj\Debug\Autorization.dll
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\Autorization\obj\Debug\Autorization.pdb
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Autorization\bin\Debug\Autorization.dll.config
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Autorization\bin\Debug\EntityFramework.dll
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Autorization\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Autorization\bin\Debug\EntityFramework.xml
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Autorization\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Autorization\obj\Debug\Autorization.csprojResolveAssemblyReference.cache

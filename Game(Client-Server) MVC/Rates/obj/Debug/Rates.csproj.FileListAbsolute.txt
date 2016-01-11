@@ -1,0 +1,10 @@
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Rates\bin\Debug\Rates.dll
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Rates\bin\Debug\Rates.pdb
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Rates\obj\Debug\Rates.dll
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Rates\obj\Debug\Rates.pdb
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\Rates\bin\Debug\Rates.dll
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\Rates\bin\Debug\Rates.pdb
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\Rates\obj\Debug\Rates.csprojResolveAssemblyReference.cache
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\Rates\obj\Debug\Rates.dll
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\Rates\obj\Debug\Rates.pdb
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\Rates\obj\Debug\Rates.csprojResolveAssemblyReference.cache

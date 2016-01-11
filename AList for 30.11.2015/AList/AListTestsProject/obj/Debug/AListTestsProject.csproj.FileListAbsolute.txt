@@ -1,0 +1,7 @@
+C:\Tasks\AList for 30.11.2015\AList\AListTestsProject\bin\Debug\AListTestsProject.dll
+C:\Tasks\AList for 30.11.2015\AList\AListTestsProject\bin\Debug\AListTestsProject.pdb
+C:\Tasks\AList for 30.11.2015\AList\AListTestsProject\bin\Debug\AList.exe
+C:\Tasks\AList for 30.11.2015\AList\AListTestsProject\bin\Debug\AList.pdb
+C:\Tasks\AList for 30.11.2015\AList\AListTestsProject\obj\Debug\AListTestsProject.csprojResolveAssemblyReference.cache
+C:\Tasks\AList for 30.11.2015\AList\AListTestsProject\obj\Debug\AListTestsProject.dll
+C:\Tasks\AList for 30.11.2015\AList\AListTestsProject\obj\Debug\AListTestsProject.pdb

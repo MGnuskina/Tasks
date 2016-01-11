@@ -1,0 +1,16 @@
+C:\Users\Mariya\Dropbox\XO\XO_For_Multiple_Users\GameServerr\bin\Debug\GameServerr.dll
+C:\Users\Mariya\Dropbox\XO\XO_For_Multiple_Users\GameServerr\bin\Debug\GameServerr.pdb
+C:\Users\Mariya\Dropbox\XO\XO_For_Multiple_Users\GameServerr\obj\Debug\GameServerr.dll
+C:\Users\Mariya\Dropbox\XO\XO_For_Multiple_Users\GameServerr\obj\Debug\GameServerr.pdb
+C:\Users\Mariya\Dropbox\XO\XO_For_Multiple_Users\GameServerr\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\GameServerr\bin\Debug\GameServerr.dll.config
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\GameServerr\bin\Debug\GameServerr.dll
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\GameServerr\bin\Debug\GameServerr.pdb
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\GameServerr\obj\Debug\GameServerr.dll
+C:\Users\Mariya\Dropbox\Game(Client-Server) MVC\GameServerr\obj\Debug\GameServerr.pdb
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\GameServerr\bin\Debug\GameServerr.dll.config
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\GameServerr\bin\Debug\GameServerr.dll
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\GameServerr\bin\Debug\GameServerr.pdb
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\GameServerr\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\GameServerr\obj\Debug\GameServerr.dll
+C:\Users\Marusya\Dropbox\Game(Client-Server) MVC\GameServerr\obj\Debug\GameServerr.pdb

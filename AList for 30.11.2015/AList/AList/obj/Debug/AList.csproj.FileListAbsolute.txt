@@ -1,0 +1,15 @@
+C:\Tasks\AList for 30.11.2015\AList\AList\bin\Debug\AList.exe.config
+C:\Tasks\AList for 30.11.2015\AList\AList\obj\Debug\AList.csprojResolveAssemblyReference.cache
+C:\Tasks\AList for 30.11.2015\AList\AList\bin\Debug\AList.exe
+C:\Tasks\AList for 30.11.2015\AList\AList\bin\Debug\AList.pdb
+C:\Tasks\AList for 30.11.2015\AList\AList\obj\Debug\AList.exe
+C:\Tasks\AList for 30.11.2015\AList\AList\obj\Debug\AList.pdb
+g:\Tasks\AList for 30.11.2015\AList\AList\bin\Debug\AList.exe.config
+g:\Tasks\AList for 30.11.2015\AList\AList\obj\Debug\AList.exe
+g:\Tasks\AList for 30.11.2015\AList\AList\obj\Debug\AList.pdb
+C:\Users\Marusya\Dropbox\AList for 30.11.2015\AList\AList\bin\Debug\AList.exe.config
+C:\Users\Marusya\Dropbox\AList for 30.11.2015\AList\AList\obj\Debug\AList.exe
+C:\Users\Marusya\Dropbox\AList for 30.11.2015\AList\AList\obj\Debug\AList.pdb
+C:\Users\Mariya\Dropbox\AList for 30.11.2015\AList\AList\bin\Debug\AList.exe.config
+C:\Users\Mariya\Dropbox\AList for 30.11.2015\AList\AList\obj\Debug\AList.exe
+C:\Users\Mariya\Dropbox\AList for 30.11.2015\AList\AList\obj\Debug\AList.pdb
