@@ -33,3 +33,6 @@ C:\Users\Marusya\Dropbox\SaveLoadTask\OneThreadDrawBall\Ball\Ball\bin\Debug\Yaml
 C:\Users\Marusya\Dropbox\SaveLoadTask\OneThreadDrawBall\Ball\Ball\bin\Debug\CsvHelper.dll
 C:\Users\Marusya\Dropbox\SaveLoadTask\OneThreadDrawBall\Ball\Ball\bin\Debug\CsvHelper.pdb
 C:\Users\Marusya\Dropbox\SaveLoadTask\OneThreadDrawBall\Ball\Ball\bin\Debug\CsvHelper.xml
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\OneThreadDrawBall\Ball\Ball\bin\Debug\Ball.exe.config
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\OneThreadDrawBall\Ball\Ball\obj\Debug\Ball.exe
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\OneThreadDrawBall\Ball\Ball\obj\Debug\Ball.pdb

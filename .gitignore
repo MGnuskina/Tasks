@@ -1,0 +1,6 @@
+*.suo
+SaveLoadTask/Ball/Ball.sln
+*.exe
+*.Cache
+*.pdb
+*.suo
