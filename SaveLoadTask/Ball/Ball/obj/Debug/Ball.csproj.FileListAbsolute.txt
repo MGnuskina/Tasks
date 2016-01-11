@@ -19,3 +19,16 @@ c:\Users\Marusya\Dropbox\BouncingBall\Ball\Ball\obj\Debug\Ball.csproj.GenerateRe
 C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\bin\Debug\Ball.exe.config
 C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\obj\Debug\Ball.exe
 C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\obj\Debug\Ball.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\obj\Debug\Ball.csprojResolveAssemblyReference.cache
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\obj\Debug\Ball.BouncingBallForm.resources
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\obj\Debug\Ball.Properties.Resources.resources
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\obj\Debug\Ball.csproj.GenerateResource.Cache
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\bin\Debug\Ball.exe
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\bin\Debug\Ball.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\bin\Debug\CsvHelper.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\bin\Debug\YamlDotNet.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\bin\Debug\YamlSerializer.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\bin\Debug\CsvHelper.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\bin\Debug\CsvHelper.xml
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\bin\Debug\YamlDotNet.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Ball\Ball\bin\Debug\YamlDotNet.xml

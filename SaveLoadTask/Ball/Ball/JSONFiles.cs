@@ -11,18 +11,18 @@ namespace Ball
 {
     public class JSONFiles : IWorkWithFiles
     {
-        public List<BouncingBallClass> Load(string FilePath)
+        public List<MBall> Load(string FilePath)
         {
-            List<BouncingBallClass> balls = new List<BouncingBallClass>();
-            DataContractJsonSerializer reader = new DataContractJsonSerializer(typeof(List<BouncingBallClass>));
+            List<MBall> balls = new List<MBall>();
+            DataContractJsonSerializer reader = new DataContractJsonSerializer(typeof(List<MBall>));
             FileStream file = File.Open(FilePath, FileMode.Open);
-            balls = (List<BouncingBallClass>)reader.ReadObject(file);
+            balls = (List<MBall>)reader.ReadObject(file);
             return balls;
         }
 
-        public void Save(List<BouncingBallClass> balls, string FilePath)
+        public void Save(List<MBall> balls, string FilePath)
         {
-            DataContractJsonSerializer writer = new DataContractJsonSerializer (typeof(List<BouncingBallClass>));
+            DataContractJsonSerializer writer = new DataContractJsonSerializer(typeof(List<MBall>));
             FileStream file = File.Create(FilePath);
             writer.WriteObject(file, balls);
             file.Close();

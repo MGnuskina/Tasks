@@ -12,16 +12,16 @@ namespace Ball
 {
     public class CSVFiles : IWorkWithFiles
     {
-        public List<BouncingBallClass> Load(string FilePath)
+        public List<MBall> Load(string FilePath)
         {
-            List<BouncingBallClass> balls = new List<BouncingBallClass>();
+            List<MBall> balls = new List<MBall>();
             CsvReader csv = new CsvReader(File.OpenText(FilePath));
-            balls = csv.GetRecords<BouncingBallClass>().ToList();
+            balls = csv.GetRecords<MBall>().ToList();
             csv.Dispose();
             return balls;
         }
 
-        public void Save(List<BouncingBallClass> balls, string FilePath)
+        public void Save(List<MBall> balls, string FilePath)
         {
             CsvWriter csv = new CsvWriter(new StreamWriter(FilePath));
             csv.WriteRecords(balls);

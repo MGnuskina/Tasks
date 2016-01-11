@@ -13,7 +13,9 @@ namespace Ball
 {
     public partial class BBControl : Control
     {
-        int dx, dy;
+        public int dx { get; set; }
+        public int dy { get; set; }
+
         private Thread thread;
 
         public BBControl(int X, int Y, int dx, int dy)
@@ -52,6 +54,25 @@ namespace Ball
             thread.Start();
         }
 
+        public BBControl(int X, int Y, int dx, int dy, int width, int height)
+        {
+            InitializeComponent();
+            this.Location = new Point(X, Y);
+            this.dx = dx;
+            this.dy = dy;
+            this.BackColor = Color.Black;
+            this.Width = width;
+            this.Height = height;
+
+            System.Drawing.Drawing2D.GraphicsPath Button_Path = new System.Drawing.Drawing2D.GraphicsPath();
+
+            Button_Path.AddEllipse(0, 0, this.Width, this.Height);
+
+            Region Button_Region = new Region(Button_Path);
+
+            this.Region = Button_Region;
+        }
+
         protected override void OnPaint(PaintEventArgs pe)
         {
             Graphics graphics = pe.Graphics;
@@ -60,22 +81,22 @@ namespace Ball
 
         public new void Move()
         {
-                int tmpX = Location.X;
-                int tmpY = Location.Y;
-                if (tmpX < 0 || tmpX + Size.Width > Parent.Size.Width)
-                {
-                    dx = -dx;
-                    tmpX = Location.X < 0 ? 0 : Parent.Size.Width - Size.Width;
-                }
-                tmpY = tmpY + dy;
-                if (tmpY < 0 || tmpY + Size.Width + 25 > Parent.Size.Height)
-                {
-                    dy = -dy;
-                    tmpY = tmpY < 0 ? 0 : Parent.Size.Height - Size.Width - 25;
-                }
-                tmpX = tmpX + dx;
+            int tmpX = Location.X;
+            int tmpY = Location.Y;
+            if (tmpX < 0 || tmpX + Size.Width > Parent.Size.Width)
+            {
+                dx = -dx;
+                tmpX = Location.X < 0 ? 0 : Parent.Size.Width - Size.Width;
+            }
+            tmpY = tmpY + dy;
+            if (tmpY < 0 || tmpY + Size.Width + 25 > Parent.Size.Height)
+            {
+                dy = -dy;
+                tmpY = tmpY < 0 ? 0 : Parent.Size.Height - Size.Width - 25;
+            }
+            tmpX = tmpX + dx;
 
-                this.Location = new Point(tmpX, tmpY);
+            this.Location = new Point(tmpX, tmpY);
         }
 
         private void DoWork()
@@ -87,6 +108,19 @@ namespace Ball
             }
         }
 
+        public void Start()
+        {
+            if (thread == null)
+            {
+                thread = new Thread(DoWork);
+                thread.Start();
+            }
+        }
 
+        public void Stop()
+        {
+            thread.Abort();
+            //thread.Join();
+        }
     }
 }

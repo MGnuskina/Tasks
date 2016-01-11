@@ -81,11 +81,12 @@ namespace Canvas
         private void btnLoad_Click(object sender, EventArgs e)
         {
             openFileDialog1.Title = "Load an Image";
-            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Icon Image|*.ico|Png Image|*.png|Tiff Image|*.tif";
+            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Icon Image|*.ico|Png Image|*.png|Tiff Image|*.tif|Exif Image|*.exif";
             if (openFileDialog1.ShowDialog()==DialogResult.OK)
             {
                 string path = openFileDialog1.FileName;
-                IPictureSL writer = LSFactory.getI(path);
+                string extention = (path.Substring(path.LastIndexOf('.') + 1)).ToString().ToLower();
+                IPictureSL writer = LSFactory.getI(extention);
                 Area = writer.Load(path);
                 pictureBox1.Image = Area;
             }
@@ -95,11 +96,12 @@ namespace Canvas
         private void btnSave_Click(object sender, EventArgs e)
         {
             saveFileDialog1.Title = "Save an Image";
-            saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Icon Image|*.ico|Png Image|*.png|Tiff Image|*.tif";
+            saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Icon Image|*.ico|Png Image|*.png|Tiff Image|*.tif|Exif Image|*.exif";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string path = saveFileDialog1.FileName;
-                IPictureSL writer = LSFactory.getI(path);
+                string extention = (path.Substring(path.LastIndexOf('.') + 1)).ToString().ToLower();
+                IPictureSL writer = LSFactory.getI(extention);
                 Bitmap b = new Bitmap(Area);
                 writer.Save(path, b);
                 b.Dispose();

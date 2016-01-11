@@ -9,10 +9,9 @@ namespace Canvas
 {
     public static class LSFactory
     {
-        public static IPictureSL getI(string FileName)
+        public static IPictureSL getI(string extention)
         {
             IPictureSL pictureLS;
-            string extention = (FileName.Substring(FileName.LastIndexOf('.') + 1)).ToString().ToLower();
             switch (extention)
             {
                 case "jpg":
