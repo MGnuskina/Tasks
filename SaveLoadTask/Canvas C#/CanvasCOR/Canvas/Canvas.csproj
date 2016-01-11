@@ -33,18 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ImageResizer.4.0.4\lib\net45\ImageResizer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="ImageResizer.Plugins.WebP, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ImageResizer.Plugins.WebP.4.0.4\lib\net45\ImageResizer.Plugins.WebP.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Imazen.WebP, Version=9.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Imazen.WebP.9.0.1\lib\net45\Imazen.WebP.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APictureSL.cs" />
     <Compile Include="BitmapFile.cs" />
     <Compile Include="Canvas.cs">
       <SubType>Form</SubType>
@@ -82,7 +71,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,0 +1,45 @@
+C:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.exe.config
+C:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.exe
+C:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.pdb
+C:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.csprojResolveAssemblyReference.cache
+C:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.CanvasForm.resources
+C:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.Properties.Resources.resources
+C:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.csproj.GenerateResource.Cache
+C:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.exe
+C:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.pdb
+g:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.exe.config
+g:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.exe
+g:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.pdb
+g:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.exe
+g:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.pdb
+g:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.csprojResolveAssemblyReference.cache
+g:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.CanvasForm.resources
+g:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.Properties.Resources.resources
+g:\Tasks\Canvas for 26.11.2015\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.csproj.GenerateResource.Cache
+C:\Users\Mariya\Dropbox\SaveLoadTask\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.exe.config
+C:\Users\Mariya\Dropbox\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.exe
+C:\Users\Mariya\Dropbox\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.pdb
+C:\Users\Mariya\Dropbox\SaveLoadTask\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.exe
+C:\Users\Mariya\Dropbox\SaveLoadTask\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.pdb
+C:\Users\Mariya\Dropbox\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.csprojResolveAssemblyReference.cache
+C:\Users\Mariya\Dropbox\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.CanvasForm.resources
+C:\Users\Mariya\Dropbox\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.Properties.Resources.resources
+C:\Users\Mariya\Dropbox\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.csproj.GenerateResource.Cache
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.exe.config
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.exe
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.exe
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\Canvas\Canvas\bin\Debug\Canvas.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.csprojResolveAssemblyReference.cache
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.CanvasForm.resources
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.Properties.Resources.resources
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\Canvas\Canvas\obj\Debug\Canvas.csproj.GenerateResource.Cache
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\Canvas.exe.config
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\obj\Debug\Canvas.exe
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\obj\Debug\Canvas.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\obj\Debug\Canvas.csprojResolveAssemblyReference.cache
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\obj\Debug\Canvas.CanvasForm.resources
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\obj\Debug\Canvas.Properties.Resources.resources
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\obj\Debug\Canvas.csproj.GenerateResource.Cache
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\Canvas.exe
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\Canvas.pdb
