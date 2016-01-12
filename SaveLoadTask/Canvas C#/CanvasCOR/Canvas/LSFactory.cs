@@ -9,24 +9,41 @@ namespace Canvas
 {
     public static class LSFactory
     {
-        static APictureSL[] classArray = new APictureSL[] { new BitmapFile() };
-
         public static IPictureSL getI(string extention)
         {
-            APictureSL pictureLS;
-            int i = 0;
-            int size = classArray.Length;
-            while (i<size && !classArray[i].IsYours(extention))
+            IPictureSL pictureLS;
+            switch (extention)
             {
-                i++;
-            }
-            if (i!=size)
-            {
-                pictureLS = classArray[i];
-            }
-            else
-            {
-                throw new ArgumentException();
+                case "jpg":
+                    pictureLS = new BitmapFile();
+                    break;
+                case "gif":
+                    pictureLS = new BitmapFile();
+                    break;
+                case "ico":
+                    pictureLS = new BitmapFile();
+                    break;
+                case "png":
+                    pictureLS = new BitmapFile();
+                    break;
+                case "tif":
+                    pictureLS = new BitmapFile();
+                    break;
+                case "exif":
+                    pictureLS = new BitmapFile();
+                    break;
+                case "pdf":
+                    pictureLS = new PDFFile();
+                    break;
+                case "2":
+                    pictureLS = new New2File();
+                    break;
+                case "3":
+                    pictureLS = new New3File();
+                    break;
+                default:
+                    pictureLS = new BitmapFile();
+                    break;
             }
             return pictureLS;
         }

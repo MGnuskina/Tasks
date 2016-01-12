@@ -10,17 +10,14 @@ namespace Canvas
 {
     public class BitmapFile : APictureSL
     {
-        private string[] listOfExt;
-        public override string[] ListOfExtentions
+        public override string[] ListOfExtentions { get; set; }
+
+        public BitmapFile()
         {
-            get { return listOfExt; }
-            set { listOfExt = new string[] { "jpg", "gif", "ico", "png", "tif", "exif", "bmp" }; }
+            ListOfExtentions= new string[] { "jpg", "gif", "ico", "png", "tif", "exif", "bmp" };
         }
 
         private ImageFormat imageFromat;
-        private string extention;
-
-        public BitmapFile() { }
 
         public override Bitmap Load(string FileName)
         {
@@ -61,5 +58,25 @@ namespace Canvas
                     break;
             }
         }
+
+        public override APictureSL GetHandler(string extention)
+        {
+            if (IsYours(extention))
+            {
+                return new BitmapFile();
+            }
+            else
+            {
+                if (successor != null)
+                {
+                    return successor.GetHandler(extention);
+                }
+                else
+                {
+                    throw new ArgumentNullException("Such type can't be handled");
+                }
+            }
+        }
     }
 }
+

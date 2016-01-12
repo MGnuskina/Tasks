@@ -41,7 +41,6 @@ namespace Canvas
             width.SelectedIndex = 24;
             colorPanel.BackColor = Color.Black;
 
-
             Graphics g;
             g = Graphics.FromImage(Area);
 
@@ -81,12 +80,14 @@ namespace Canvas
         private void btnLoad_Click(object sender, EventArgs e)
         {
             openFileDialog1.Title = "Load an Image";
-            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Icon Image|*.ico|Png Image|*.png|Tiff Image|*.tif|Exif Image|*.exif";
+            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Icon Image|*.ico|Png Image|*.png|Tiff Image|*.tif|Exif Image|*.exif|PDF File|*.pdf";
             if (openFileDialog1.ShowDialog()==DialogResult.OK)
             {
                 string path = openFileDialog1.FileName;
                 string extention = (path.Substring(path.LastIndexOf('.') + 1)).ToString().ToLower();
-                IPictureSL writer = LSFactory.getI(extention);
+                // IPictureSL writer = LSFactoryCORLoop.getI(extention);
+                // IPictureSL writer = LSFactory.getI(extention);
+                IPictureSL writer = new LSFactoryCORLL().getI(extention);
                 Area = writer.Load(path);
                 pictureBox1.Image = Area;
             }
@@ -96,13 +97,14 @@ namespace Canvas
         private void btnSave_Click(object sender, EventArgs e)
         {
             saveFileDialog1.Title = "Save an Image";
-            saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Icon Image|*.ico|Png Image|*.png|Tiff Image|*.tif|Exif Image|*.exif";
-
+            saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Icon Image|*.ico|Png Image|*.png|Tiff Image|*.tif|Exif Image|*.exif|PDF File|*.pdf";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string path = saveFileDialog1.FileName;
                 string extention = (path.Substring(path.LastIndexOf('.') + 1)).ToString().ToLower();
-                IPictureSL writer = LSFactory.getI(extention);
+                // IPictureSL writer = LSFactoryCORLoop.getI(extention);
+                // IPictureSL writer = LSFactory.getI(extention);
+                IPictureSL writer = new LSFactoryCORLL().getI(extention);
                 Bitmap b = new Bitmap(Area);
                 writer.Save(path, b);
                 b.Dispose();

@@ -43,3 +43,12 @@ C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\o
 C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\obj\Debug\Canvas.csproj.GenerateResource.Cache
 C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\Canvas.exe
 C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\Canvas.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\ImageResizer.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\ImageResizer.Plugins.WebP.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\Imazen.WebP.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\ImageResizer.xml
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\ImageResizer.Plugins.WebP.xml
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\Imazen.WebP.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\Imazen.WebP.xml
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\PQScan.ImageToPDF.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\bin\Debug\PQScan.PDFToImage.dll

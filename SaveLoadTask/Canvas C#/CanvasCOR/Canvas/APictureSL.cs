@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Canvas
 {
-    public abstract class APictureSL : IPictureSL
+    public abstract class APictureSL : Handler,IPictureSL
     {
         public abstract string[] ListOfExtentions { get; set; }
 
