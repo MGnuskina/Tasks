@@ -19,3 +19,9 @@ C:\Users\Mariya\Documents\GitHub\Tasks\AList Generic\AList\AList\obj\Debug\AList
 C:\Users\Mariya\Documents\GitHub\Tasks\AList Generic\AList\AList\bin\Debug\AList.exe
 C:\Users\Mariya\Documents\GitHub\Tasks\AList Generic\AList\AList\bin\Debug\AList.pdb
 C:\Users\Mariya\Documents\GitHub\Tasks\AList Generic\AList\AList\obj\Debug\AList.csprojResolveAssemblyReference.cache
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AList\bin\Debug\AList.exe.config
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AList\bin\Debug\AList.exe
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AList\bin\Debug\AList.pdb
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AList\obj\Debug\AList.csprojResolveAssemblyReference.cache
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AList\obj\Debug\AList.exe
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AList\obj\Debug\AList.pdb

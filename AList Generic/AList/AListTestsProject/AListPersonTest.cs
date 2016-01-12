@@ -1289,137 +1289,141 @@ namespace AListTestsProject
         }
         #endregion
 
-        //#region Reverse
-        //[TestMethod]
-        //public void AListReversOddTest()
-        //{
-        //    var a = MakeAList();
-        //    var expectedRes = MakeAList();
-        //    Person[] mas = new Person[] { 1, 2, -3, 4, 5, -2, 6 };
-        //    a.Init(mas);
-        //    mas = new Person[] { 6, -2, 5, 4, -3, 2, 1 };
-        //    expectedRes.Init(mas);
-        //    a.Reverse();
-        //    Assert.AreEqual(7, a.Size());
-        //    CollectionAssert.AreEqual(expectedRes.ToArray(), a.ToArray());
-        //}
+        #region Reverse
+        [TestMethod]
+        public void AListReversOddTest()
+        {
+            var a = MakeAList();
+            var expectedRes = MakeAList();
+            Person[] mas = new Person[5] { new Person(1, "rr", "qwer", 22), new Person(2, "rr", "qwer", 22), new Person(11, "rr", "qwer", 22), new Person(4, "rr", "qwer", 22),
+                new Person(5, "rr", "qwer", 22) };
+            a.Init(mas);
+            mas = new Person[5] { new Person(5, "rr", "qwer", 22), new Person(4, "rr", "qwer", 22), new Person(11, "rr", "qwer", 22), new Person(2, "rr", "qwer", 22),
+                new Person(1, "rr", "qwer", 22) };
+            expectedRes.Init(mas);
+            a.Reverse();
+            Assert.AreEqual(5, a.Size());
+            Assert.AreEqual(expectedRes.ToArray().ToString(), a.ToArray().ToString());
+        }
 
-        //[TestMethod]
-        //public void AListReversEvenTest()
-        //{
-        //    var a = MakeAList();
-        //    var expectedRes = MakeAList();
-        //    Person[] mas = new Person[] { 1, 2, -3, 4 };
-        //    a.Init(mas);
-        //    mas = new Person[] { 4, -3, 2, 1 };
-        //    expectedRes.Init(mas);
-        //    a.Reverse();
-        //    Assert.AreEqual(4, a.Size());
-        //    CollectionAssert.AreEqual(expectedRes.ToArray(), a.ToArray());
-        //}
+        [TestMethod]
+        public void AListReversEvenTest()
+        {
+            var a = MakeAList();
+            var expectedRes = MakeAList();
+            Person[] mas = new Person[4] { new Person(1, "rr", "qwer", 22), new Person(2, "rr", "qwer", 22), new Person(11, "rr", "qwer", 22), new Person(4, "rr", "qwer", 22) };
+            a.Init(mas);
+            mas = new Person[4] { new Person(4, "rr", "qwer", 22), new Person(11, "rr", "qwer", 22), new Person(2, "rr", "qwer", 22), new Person(1, "rr", "qwer", 22) };
+            expectedRes.Init(mas);
+            a.Reverse();
+            Assert.AreEqual(4, a.Size());
+            Assert.AreEqual(expectedRes.ToArray().ToString(), a.ToArray().ToString());
+        }
 
-        //[TestMethod]
-        //public void AListReverseOneElTest()
-        //{
-        //    var a = MakeAList();
-        //    var expectedRes = MakeAList();
-        //    Person[] mas = new Person[] { 1 };
-        //    a.Init(mas);
-        //    mas = new Person[] { 1 };
-        //    expectedRes.Init(mas);
-        //    a.Reverse();
-        //    Assert.AreEqual(1, a.Size());
-        //    CollectionAssert.AreEqual(expectedRes.ToArray(), a.ToArray());
-        //}
+        [TestMethod]
+        public void AListReverseOneElTest()
+        {
+            var a = MakeAList();
+            var expectedRes = MakeAList();
+            Person[] mas = new Person[1] { new Person(1, "rr", "qwer", 22)};
+            a.Init(mas);
+            mas = new Person[1] { new Person(1, "rr", "qwer", 22) };
+            expectedRes.Init(mas);
+            a.Reverse();
+            Assert.AreEqual(1, a.Size());
+            Assert.AreEqual(expectedRes.ToArray().ToString(), a.ToArray().ToString());
+        }
 
-        //[TestMethod]
-        //public void AListReverse2ElTest()
-        //{
-        //    var a = MakeAList();
-        //    var expectedRes = MakeAList();
-        //    Person[] mas = new Person[] { 1, 3 };
-        //    a.Init(mas);
-        //    mas = new Person[] { 3, 1 };
-        //    expectedRes.Init(mas);
-        //    a.Reverse();
-        //    Assert.AreEqual(2, a.Size());
-        //    CollectionAssert.AreEqual(expectedRes.ToArray(), a.ToArray());
-        //}
+        [TestMethod]
+        public void AListReverse2ElTest()
+        {
+            var a = MakeAList();
+            var expectedRes = MakeAList();
+            Person[] mas = new Person[2] { new Person(1, "rr", "qwer", 22), new Person(2, "rr", "qwer", 22)};
+            a.Init(mas);
+            mas = new Person[2] { new Person(2, "rr", "qwer", 22), new Person(1, "rr", "qwer", 22) };
+            expectedRes.Init(mas);
+            a.Reverse();
+            Assert.AreEqual(2, a.Size());
+            Assert.AreEqual(expectedRes.ToArray().ToString(), a.ToArray().ToString());
+        }
 
-        //[TestMethod]
-        //[ExpectedException(typeof(InvalidOperationException), "This method can't be used for an empty AList0")]
-        //public void AListReverseEmptyTest()
-        //{
-        //    var a = MakeAList();
-        //    a.Reverse();
-        //}
-        //#endregion
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException), "This method can't be used for an empty AList0")]
+        public void AListReverseEmptyTest()
+        {
+            var a = MakeAList();
+            a.Reverse();
+        }
+        #endregion
 
-        //#region HalfReverse
-        //[TestMethod]
-        //public void AListHalfReverseOddTest()
-        //{
-        //    var a = MakeAList();
-        //    var expectedRes = MakeAList();
-        //    Person[] mas = new Person[] { 1, 2, -3, 4, 5, -2, 6 };
-        //    a.Init(mas);
-        //    mas = new Person[] { 5, -2, 6, 4, 1, 2, -3 };
-        //    expectedRes.Init(mas);
-        //    a.HalfReverse();
-        //    Assert.AreEqual(7, a.Size());
-        //    CollectionAssert.AreEqual(expectedRes.ToArray(), a.ToArray());
-        //}
+        #region HalfReverse
+        [TestMethod]
+        public void AListHalfReverseOddTest()
+        {
+            var a = MakeAList();
+            var expectedRes = MakeAList();
+            Person[] mas = new Person[5] { new Person(1, "rr", "qwer", 22), new Person(2, "rr", "qwer", 22), new Person(11, "rr", "qwer", 22), new Person(4, "rr", "qwer", 22),
+                new Person(5, "rr", "qwer", 22) };
+            a.Init(mas);
+            mas = new Person[5] { new Person(4, "rr", "qwer", 22), new Person(5, "rr", "qwer", 22), new Person(11, "rr", "qwer", 22), new Person(1, "rr", "qwer", 22),
+                new Person(2, "rr", "qwer", 22) };
+            expectedRes.Init(mas);
+            a.HalfReverse();
+            Assert.AreEqual(5, a.Size());
+            Assert.AreEqual(expectedRes.ToArray().ToString(), a.ToArray().ToString());
+        }
 
-        //[TestMethod]
-        //public void AListHalfReverseEvenTest()
-        //{
-        //    var a = MakeAList();
-        //    var expectedRes = MakeAList();
-        //    Person[] mas = new Person[] { 1, 2, -3, 4, 5, -2 };
-        //    a.Init(mas);
-        //    mas = new Person[] { 4, 5, -2, 1, 2, -3 };
-        //    expectedRes.Init(mas);
-        //    a.HalfReverse();
-        //    Assert.AreEqual(6, a.Size());
-        //    CollectionAssert.AreEqual(expectedRes.ToArray(), a.ToArray());
-        //}
+        [TestMethod]
+        public void AListHalfReverseEvenTest()
+        {
+            var a = MakeAList();
+            var expectedRes = MakeAList();
+            Person[] mas = new Person[4] { new Person(1, "rr", "qwer", 22), new Person(2, "rr", "qwer", 22), new Person(11, "rr", "qwer", 22), new Person(4, "rr", "qwer", 22)};
+            a.Init(mas);
+            mas = new Person[4] { new Person(11, "rr", "qwer", 22), new Person(4, "rr", "qwer", 22), new Person(1, "rr", "qwer", 22), new Person(2, "rr", "qwer", 22) };
+            expectedRes.Init(mas);
+            a.HalfReverse();
+            Assert.AreEqual(4, a.Size());
+            Assert.AreEqual(expectedRes.ToArray().ToString(), a.ToArray().ToString());
+        }
 
-        //[TestMethod]
-        //public void AListHalfReverse2Test()
-        //{
-        //    var a = MakeAList();
-        //    var expectedRes = MakeAList();
-        //    Person[] mas = new Person[] { 1, 2 };
-        //    a.Init(mas);
-        //    mas = new Person[] { 2, 1 };
-        //    expectedRes.Init(mas);
-        //    a.HalfReverse();
-        //    Assert.AreEqual(2, a.Size());
-        //    CollectionAssert.AreEqual(expectedRes.ToArray(), a.ToArray());
-        //}
+        [TestMethod]
+        public void AListHalfReverse2Test()
+        {
+            var a = MakeAList();
+            var expectedRes = MakeAList();
+            Person[] mas = new Person[2] { new Person(1, "rr", "qwer", 22), new Person(2, "rr", "qwer", 22) };
+            a.Init(mas);
+            mas = new Person[2] { new Person(2, "rr", "qwer", 22), new Person(1, "rr", "qwer", 22) };
+            expectedRes.Init(mas);
+            a.HalfReverse();
+            Assert.AreEqual(2, a.Size());
+            Assert.AreEqual(expectedRes.ToArray().ToString(), a.ToArray().ToString());
+        }
 
-        //[TestMethod]
-        //public void AListHalfReverse1Test()
-        //{
-        //    var a = MakeAList();
-        //    var expectedRes = MakeAList();
-        //    Person[] mas = new Person[] { -2 };
-        //    a.Init(mas);
-        //    mas = new Person[] { -2 };
-        //    expectedRes.Init(mas);
-        //    a.HalfReverse();
-        //    Assert.AreEqual(1, a.Size());
-        //    CollectionAssert.AreEqual(expectedRes.ToArray(), a.ToArray());
-        //}
+        [TestMethod]
+        public void AListHalfReverse1Test()
+        {
+            var a = MakeAList();
+            var expectedRes = MakeAList();
+            Person[] mas = new Person[1] { new Person(1, "rr", "qwer", 22)};
+            a.Init(mas);
+            mas = new Person[1] { new Person(1, "rr", "qwer", 22) };
+            expectedRes.Init(mas);
+            a.HalfReverse();
+            Assert.AreEqual(1, a.Size());
+            Assert.AreEqual(expectedRes.ToArray().ToString(), a.ToArray().ToString());
+        }
 
-        //[TestMethod]
-        //[ExpectedException(typeof(InvalidOperationException), "This method can't be used for an empty AList0")]
-        //public void AListHalfReverseEmptyTest()
-        //{
-        //    var a = MakeAList();
-        //    a.HalfReverse();
-        //}
-        //#endregion
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException), "This method can't be used for an empty AList0")]
+        public void AListHalfReverseEmptyTest()
+        {
+            var a = MakeAList();
+            a.HalfReverse();
+        }
+        #endregion
 
         #region Get
         [TestMethod]

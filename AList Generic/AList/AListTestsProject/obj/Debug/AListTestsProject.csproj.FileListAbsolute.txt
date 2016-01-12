@@ -12,3 +12,10 @@ C:\Users\Mariya\Documents\GitHub\Tasks\AList Generic\AList\AListTestsProject\bin
 C:\Users\Mariya\Documents\GitHub\Tasks\AList Generic\AList\AListTestsProject\obj\Debug\AListTestsProject.csprojResolveAssemblyReference.cache
 C:\Users\Mariya\Documents\GitHub\Tasks\AList Generic\AList\AListTestsProject\obj\Debug\AListTestsProject.dll
 C:\Users\Mariya\Documents\GitHub\Tasks\AList Generic\AList\AListTestsProject\obj\Debug\AListTestsProject.pdb
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AListTestsProject\bin\Debug\AListTestsProject.dll
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AListTestsProject\bin\Debug\AListTestsProject.pdb
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AListTestsProject\bin\Debug\AList.exe
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AListTestsProject\bin\Debug\AList.pdb
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AListTestsProject\obj\Debug\AListTestsProject.csprojResolveAssemblyReference.cache
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AListTestsProject\obj\Debug\AListTestsProject.dll
+C:\Users\Marusya\Documents\GitHub\Tasks\AList Generic\AList\AListTestsProject\obj\Debug\AListTestsProject.pdb
