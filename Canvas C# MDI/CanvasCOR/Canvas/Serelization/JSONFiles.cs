@@ -12,18 +12,18 @@ namespace Canvas
 {
     public class JSONFiles : IWorkWithFiles
     {
-        public List<Control> Load(string FilePath)
+        public List<ShapeData> Load(string FilePath)
         {
-            List<Control> balls = new List<Control>();
-            DataContractJsonSerializer reader = new DataContractJsonSerializer(typeof(List<Control>));
+            List<ShapeData> balls = new List<ShapeData>();
+            DataContractJsonSerializer reader = new DataContractJsonSerializer(typeof(List<ShapeData>));
             FileStream file = File.Open(FilePath, FileMode.Open);
-            balls = (List<Control>)reader.ReadObject(file);
+            balls = (List<ShapeData>)reader.ReadObject(file);
             return balls;
         }
 
-        public void Save(List<Control> balls, string FilePath)
+        public void Save(List<ShapeData> balls, string FilePath)
         {
-            DataContractJsonSerializer writer = new DataContractJsonSerializer(typeof(List<Control>));
+            DataContractJsonSerializer writer = new DataContractJsonSerializer(typeof(List<ShapeData>));
             FileStream file = File.Create(FilePath);
             writer.WriteObject(file, balls);
             file.Close();

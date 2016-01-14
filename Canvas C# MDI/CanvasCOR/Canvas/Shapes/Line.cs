@@ -22,14 +22,19 @@ namespace Canvas
             this.Width = width;
             this.Height = height;
             this.DrawPen = new Pen(color, lineWidth);//local veriable
+            this.X = X;
+            this.Y = Y;
 
-            System.Drawing.Drawing2D.GraphicsPath Button_Path = new System.Drawing.Drawing2D.GraphicsPath();
-            Button_Path.AddRectangle(new System.Drawing.Rectangle(0, 0, this.Width, this.Height));//x2,y2///Line
-            Region Button_Region = new Region(Button_Path);
-            this.Region = Button_Region;
+            //System.Drawing.Drawing2D.GraphicsPath Button_Path = new System.Drawing.Drawing2D.GraphicsPath();
+            //Button_Path.AddRectangle(new System.Drawing.Rectangle(0, 0, this.Width, this.Height));//x2,y2///Line
+            //Region Button_Region = new Region(Button_Path);
+            //this.Region = Button_Region;
 
-            Graphics g = this.CreateGraphics();
-            OnPaint(new PaintEventArgs(g, new System.Drawing.Rectangle(this.Location.X, this.Location.Y, this.Width, this.Height)));
+            ////this.SetAutoSizeMode(AutoSizeMode.GrowAndShrink);
+            //this.ResizeRedraw = true;
+
+            //Graphics g = this.CreateGraphics();
+            //OnPaint(new PaintEventArgs(g, new System.Drawing.Rectangle(this.Location.X, this.Location.Y, this.Width, this.Height)));
         }
 
         protected override CreateParams CreateParams
@@ -42,10 +47,17 @@ namespace Canvas
             }
         }
 
+
         protected override void OnPaint(PaintEventArgs pe)
         {
+
             Graphics graphics = pe.Graphics;
             graphics.DrawLine(this.DrawPen, 0, 0, this.Width, this.Height);///x2,y2
+
+            //using (SolidBrush brush = new SolidBrush(DrawPen.Color))
+            //{
+            //    pe.Graphics.FillRectangle(brush, pe.ClipRectangle);
+            //}
         }
     }
 }

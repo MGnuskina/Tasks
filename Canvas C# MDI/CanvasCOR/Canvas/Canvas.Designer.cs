@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,25 +105,12 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(13, 527);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(68, 29);
-            this.btnLoad.TabIndex = 3;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(13, 562);
+            this.btnSave.Location = new System.Drawing.Point(12, 170);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(68, 29);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 13;
             // 
             // menuStrip1
             // 
@@ -157,12 +143,14 @@
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             this.loadToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.loadToolStripMenuItem.Text = "Load";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
@@ -317,6 +305,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(49, 25);
             this.toolStripButton1.Text = "Color";
+            this.toolStripButton1.Click += new System.EventHandler(this.colorPanel_Click);
             // 
             // toolStripSeparator1
             // 
@@ -374,7 +363,6 @@
             this.tbcbWidth.Size = new System.Drawing.Size(121, 28);
             this.tbcbWidth.Tag = "";
             this.tbcbWidth.Text = "Width:";
-            this.tbcbWidth.SelectedIndexChanged += new System.EventHandler(this.cbWidth_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -445,7 +433,6 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.tabControlCanvas);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.colorPanel);
             this.Controls.Add(this.label1);
@@ -476,7 +463,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;

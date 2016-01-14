@@ -9,7 +9,7 @@ namespace Canvas
 {
     public interface IWorkWithFiles
     {
-        void Save(List<Control> balls, string FilePath);
-        List<Control> Load(string FilePath);
+        void Save(List<ShapeData> balls, string FilePath);
+        List<ShapeData> Load(string FilePath);
     }
 }

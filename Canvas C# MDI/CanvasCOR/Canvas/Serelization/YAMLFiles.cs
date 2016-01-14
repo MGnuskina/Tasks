@@ -12,16 +12,16 @@ namespace Canvas
 {
     public class YAMLFiles : IWorkWithFiles
     {
-        public List<Control> Load(string FilePath)
+        public List<ShapeData> Load(string FilePath)
         {
-            List<Control> balls = new List<Control>();
+            List<ShapeData> balls = new List<ShapeData>();
             YamlSerializer reader = new YamlSerializer();
             StreamReader file = new StreamReader(FilePath);
-            balls = (List<Control>)reader.Deserialize(file, typeof(List<Control>))[0];
+            balls = (List<ShapeData>)reader.Deserialize(file, typeof(List<ShapeData>))[0];
             return balls;
         }
 
-        public void Save(List<Control> balls, string FilePath)
+        public void Save(List<ShapeData> balls, string FilePath)
         {
             YamlSerializer save = new YamlSerializer();
             FileStream file = File.Create(FilePath);

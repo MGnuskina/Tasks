@@ -21,7 +21,7 @@ namespace Canvas
                 case "yaml":
                     fileOperation = new YAMLFiles();
                     break;
-                case "json":
+                case "json": 
                     fileOperation = new JSONFiles();
                     break;
                 default:

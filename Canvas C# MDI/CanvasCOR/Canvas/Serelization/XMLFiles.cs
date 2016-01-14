@@ -12,18 +12,18 @@ namespace Canvas
 {
     public class XMLFiles : IWorkWithFiles
     {
-        public List<Control> Load(string FilePath)
+        public List<ShapeData> Load(string FilePath)
         {
-            List<Control> balls = new List<Control>();
-            XmlSerializer reader = new XmlSerializer(typeof(List<Control>));
+            List<ShapeData> balls = new List<ShapeData>();
+            XmlSerializer reader = new XmlSerializer(typeof(List<ShapeData>));
             StreamReader file = new StreamReader(FilePath);
-            balls = (List<Control>)reader.Deserialize(file);
+            balls = (List<ShapeData>)reader.Deserialize(file);
             return balls;
         }
 
-        public void Save(List<Control> balls, string FilePath)
+        public void Save(List<ShapeData> balls, string FilePath)
         {
-            XmlSerializer writer = new XmlSerializer(typeof(List<Control>));
+            XmlSerializer writer = new XmlSerializer(typeof(List<ShapeData>));
             FileStream file = File.Create(FilePath);
             writer.Serialize(file, balls);
             file.Close();

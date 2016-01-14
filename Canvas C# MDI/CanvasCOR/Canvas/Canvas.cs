@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Canvas.Serelization;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,19 +28,25 @@ namespace Canvas
         private void CanvasForm_MouseDown(object sender, MouseEventArgs e)
         {
             allowToDraw = true;
-            shape = ShapeFactory.GetShapeInstance(cbType.SelectedItem.ToString(), e.Y, e.X,
-                e.Y + 1, e.X + 1, Convert.ToInt16(width.SelectedItem),
-                colorPanel.BackColor);
+            panelCanvas1.Focus();
+            shape = ShapeFactory.GetShapeInstance(cbType.SelectedItem.ToString(), e.X, e.Y,
+                1,1, Convert.ToInt16(width.SelectedItem), colorPanel.BackColor);
+            //shape.GotFocus
+            panelCanvas1.AutoSize = false;
             panelCanvas1.Controls.Add(shape);
-            panelCanvas1.Controls[panelCanvas1.Controls.Count - 1].BringToFront();
-            panelCanvas1.Controls[panelCanvas1.Controls.Count - 1].MouseUp += CanvasForm_MouseUp;
-            panelCanvas1.Controls[panelCanvas1.Controls.Count - 1].MouseDown += CanvasForm_MouseDown;
             shapeIndex = panelCanvas1.Controls.Count - 1;
         }
 
         private void CanvasForm_MouseUp(object sender, MouseEventArgs e)
         {
             allowToDraw = false;
+            panelCanvas1.Controls[0].BringToFront();
+            foreach(Shape shape in panelCanvas1.Controls)
+            {
+                //shape.MouseDown += CanvasForm_MouseDown;
+                //shape.MouseUp += CanvasForm_MouseUp;
+            }
+            
         }
 
         private void CanvasForm_Load(object sender, EventArgs e)
@@ -49,6 +56,9 @@ namespace Canvas
             cbType.SelectedIndex = 0;
             tscbWidth.SelectedIndex = 0;
             tbcbWidth.SelectedIndex = 0;
+            //tbcbWidth.VisibleChanged += Width_SelectedIndexChanged;
+            //tscbWidth.VisibleChanged += Width_SelectedIndexChanged;
+            //width.VisibleChanged += Width_SelectedIndexChanged;
         }
 
         private void colorPanel_Click(object sender, EventArgs e)
@@ -65,51 +75,86 @@ namespace Canvas
             {
                 if (panelCanvas1.Controls[shapeIndex] is Shape)
                 {
-                    (panelCanvas1.Controls[shapeIndex] as Shape).ResizeShape(e.X, e.Y);
+                    Shape s = (panelCanvas1.Controls[shapeIndex] as Shape);
+                    s.ResizeShape(e.X, e.Y);
                 }
             }
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void Width_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //    openFileDialog1.Title = "Load an Image";
-            //    openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Icon Image|*.ico|Png Image|*.png|Tiff Image|*.tif|Exif Image|*.exif|PDF File|*.pdf";
-            //    if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            //    {
-            //        string path = openFileDialog1.FileName;
-            //        string extention = (path.Substring(path.LastIndexOf('.') + 1)).ToString().ToLower();
-            //        IPictureSL writer = LSFactoryCORLoop.getI(extention);
-            //        IPictureSL writer = LSFactory.getI(extention);
-            //        IPictureSL writer = new LSFactoryCORLL().getI(extention);
-            //        Area = writer.Load(path);
-            //        pictureBox1.Image = Area;
-            //    }
-            //    openFileDialog1.Dispose();
+            if (tscbWidth.SelectedIndex != tbcbWidth.SelectedIndex && tscbWidth.SelectedIndex != width.SelectedIndex)
+            {
+                tbcbWidth.SelectedIndex = tscbWidth.SelectedIndex;
+                width.SelectedIndex = tscbWidth.SelectedIndex;
+            }
+            else
+            {
+                if (tscbWidth.SelectedIndex != tbcbWidth.SelectedIndex && tbcbWidth.SelectedIndex != width.SelectedIndex)
+                {
+                    tscbWidth.SelectedIndex = tbcbWidth.SelectedIndex;
+                    width.SelectedIndex = tbcbWidth.SelectedIndex;
+                }
+                else
+                {
+                    if (tscbWidth.SelectedIndex != width.SelectedIndex && tbcbWidth.SelectedIndex != width.SelectedIndex)
+                    {
+                        tscbWidth.SelectedIndex = width.SelectedIndex;
+                        tbcbWidth.SelectedIndex = width.SelectedIndex;
+                    }
+                }
+            }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //    saveFileDialog1.Title = "Save an Image";
-            //    saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Icon Image|*.ico|Png Image|*.png|Tiff Image|*.tif|Exif Image|*.exif|PDF File|*.pdf";
-            //    if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            //    {
-            //        string path = saveFileDialog1.FileName;
-            //        string extention = (path.Substring(path.LastIndexOf('.') + 1)).ToString().ToLower();
-            //        IPictureSL writer = LSFactoryCORLoop.getI(extention);
-            //        IPictureSL writer = LSFactory.getI(extention);
-            //        IPictureSL writer = new LSFactoryCORLL().getI(extention);
-            //        Bitmap b = new Bitmap(Area);
-            //        writer.Save(path, b);
-            //        b.Dispose();
-            //    }
-            //    saveFileDialog1.Dispose();
+            saveFileDialog1.Title = "Save";
+            saveFileDialog1.Filter = "XML file|*.xml|JSON file|*.json|CSV file|*.csv|YAML file|*.yaml";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                ShapeOriginator originator = new ShapeOriginator();
+                SetOriginator(originator);
+                string path = saveFileDialog1.FileName;
+                IWorkWithFiles saveFile = LSFactory.findExtention(path);
+                saveFile.Save(originator.CreateMemento().GetMemento(), path);
+            }
+            saveFileDialog1.Dispose();
         }
 
-        private void cbWidth_SelectedIndexChanged(object sender, EventArgs e)
+        private void SetOriginator(ShapeOriginator originator)
         {
-            //tscbWidth.SelectedIndex = (sender).SelectedIndex;
-            //tbcbWidth.SelectedIndex = (sender).SelectedIndex;
-            //width.SelectedIndex = (sender).SelectedIndex;
+            originator.shapes = new List<Shape>();
+            foreach (Shape shape in panelCanvas1.Controls)
+            {
+                originator.shapes.Add(shape);
+            }
+        }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Open";
+            openFileDialog1.Filter = "XML file|*.xml|JSON file|*.json|CSV file|*.csv|YAML file|*.yaml";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                ShapeOriginator originator = new ShapeOriginator();
+                string path = openFileDialog1.FileName;
+                IWorkWithFiles openFile = LSFactory.findExtention(path);
+                originator.SetMemento(new ShapeMemento(openFile.Load(path)));
+                SetControls(originator);
+            }
+            openFileDialog1.Dispose();
+        }
+
+        private void SetControls(ShapeOriginator originator)
+        {
+            while (panelCanvas1.Controls.Count > 0)
+            {
+                panelCanvas1.Controls[0].Dispose();
+            }
+            foreach (Shape shape in originator.shapes)
+            {
+                panelCanvas1.Controls.Add(shape);
+            }
         }
     }
 }

@@ -1,0 +1,41 @@
+%YAML 1.2
+---
+!<!System.Collections.Generic.List%601[[Canvas.ShapeData,+Canvas,+Version=1.0.0.0,+Culture=neutral,+PublicKeyToken=null]]>
+Capacity: 5
+ICollection.Items: 
+  - Type: Line
+    Width: 100
+    Y: 84
+    X: 122
+    LineWidth: 1
+    Color: [0, 0, 0]
+    Height: 105
+  - Type: Line
+    Width: 63
+    Y: 52
+    X: 299
+    LineWidth: 1
+    Color: [255, 128, 128]
+    Height: 168
+  - Type: Rectangle
+    Width: 53
+    Y: 128
+    X: 256
+    LineWidth: 1
+    Color: [255, 128, 128]
+    Height: 55
+  - Type: Rectangle
+    Width: 41
+    Y: 142
+    X: 27
+    LineWidth: 1
+    Color: [0, 128, 0]
+    Height: 164
+  - Type: Elipse
+    Width: 48
+    Y: 218
+    X: 236
+    LineWidth: 1
+    Color: [255, 255, 0]
+    Height: 50
+...

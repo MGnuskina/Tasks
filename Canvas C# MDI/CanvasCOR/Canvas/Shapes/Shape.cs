@@ -13,23 +13,26 @@ namespace Canvas
 {
     public partial class Shape : Control  ///do we need it?
     {
-        public Pen DrawPen{ get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
+        public Pen DrawPen { get; set; }
 
         public void ResizeShape(int xNew, int yNew)
         {
-            int width = xNew;
-            int height = yNew;
-            if (xNew<this.Location.X)
+            int width = xNew - X;
+            int height = yNew - Y;
+            if (xNew < X )
             {
-                width = this.Location.X;
                 this.Location = new Point(xNew, this.Location.Y);
             }
-            if (yNew < this.Location.Y)
+            if (yNew < Y)
             {
-                height = this.Location.Y;
                 this.Location = new Point(this.Location.X, yNew);
             }
-            this.Size = new Size(Math.Abs(width - this.Location.X), Math.Abs(height - this.Location.Y));
+
+            //this.ClientSize = new Size(Math.Abs(width),Math.Abs(height));
+            this.Size= new Size(Math.Abs(width), Math.Abs(height));
+
             this.Invalidate();
         }
     }
