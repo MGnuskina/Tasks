@@ -41,6 +41,7 @@ namespace Canvas
             base.OnGotFocus(e);
             Graphics graphics = this.CreateGraphics();
             graphics.DrawRectangle(new Pen(GetSelectionColor(), 4), 1, 1, this.Width - 2, this.Height - 2);////if color is 255
+            this.Invalidate();
         }
 
         protected override void OnLostFocus(EventArgs e)

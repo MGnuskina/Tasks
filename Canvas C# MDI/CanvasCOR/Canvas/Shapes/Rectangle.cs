@@ -39,14 +39,14 @@ namespace Canvas
         protected override void OnPaint(PaintEventArgs pe)
         {
             Graphics graphics = pe.Graphics;
-            graphics.FillRectangle(new SolidBrush(this.DrawPen.Color), 0, 0, this.Width, this.Height);
+            graphics.DrawRectangle(this.DrawPen, 0, 0, this.Width, this.Height);
         }
 
         protected override void OnLostFocus(EventArgs e)
         {
             base.OnLostFocus(e);
             Graphics graphics = this.CreateGraphics();
-            graphics.DrawRectangle(new Pen(this.DrawPen.Color, 4), 1, 1, this.Width - 2, this.Height - 2);////if color is 255
+            graphics.DrawRectangle(new Pen(this.DrawPen.Color, 4), 1, 1, this.Width - 2, this.Height - 2);
         }
     }
 }
