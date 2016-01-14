@@ -64,6 +64,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbType = new System.Windows.Forms.ComboBox();
             this.width = new System.Windows.Forms.ComboBox();
+            this.tbcbType = new System.Windows.Forms.ToolStripComboBox();
+            this.tscbType = new System.Windows.Forms.ToolStripComboBox();
             this.menuStrip1.SuspendLayout();
             this.tabControlCanvas.SuspendLayout();
             this.tabPageCanvas1.SuspendLayout();
@@ -203,9 +205,12 @@
             this.tscbWidth.Name = "tscbWidth";
             this.tscbWidth.Size = new System.Drawing.Size(121, 28);
             this.tscbWidth.Text = "Width";
+            this.tscbWidth.Enter += new System.EventHandler(this.widthEnter);
             // 
             // heightToolStripMenuItem
             // 
+            this.heightToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tscbType});
             this.heightToolStripMenuItem.Name = "heightToolStripMenuItem";
             this.heightToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.heightToolStripMenuItem.Text = "Type";
@@ -291,7 +296,8 @@
             this.toolStripButton3,
             this.toolStripSeparator2,
             this.toolStripLabel1,
-            this.tbcbWidth});
+            this.tbcbWidth,
+            this.tbcbType});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1030, 28);
@@ -363,6 +369,7 @@
             this.tbcbWidth.Size = new System.Drawing.Size(121, 28);
             this.tbcbWidth.Tag = "";
             this.tbcbWidth.Text = "Width:";
+            this.tbcbWidth.Enter += new System.EventHandler(this.widthEnter);
             // 
             // label3
             // 
@@ -421,6 +428,29 @@
             this.width.Name = "width";
             this.width.Size = new System.Drawing.Size(109, 24);
             this.width.TabIndex = 12;
+            this.width.Enter += new System.EventHandler(this.widthEnter);
+            // 
+            // tbcbType
+            // 
+            this.tbcbType.Items.AddRange(new object[] {
+            "Line",
+            "Rectangle",
+            "Elipse",
+            "RoundRectangle",
+            "Fozy"});
+            this.tbcbType.Name = "tbcbType";
+            this.tbcbType.Size = new System.Drawing.Size(121, 28);
+            // 
+            // tscbType
+            // 
+            this.tscbType.Items.AddRange(new object[] {
+            "Line",
+            "Rectangle",
+            "Elipse",
+            "RoundRectangle",
+            "Fozy"});
+            this.tscbType.Name = "tscbType";
+            this.tscbType.Size = new System.Drawing.Size(121, 28);
             // 
             // CanvasForm
             // 
@@ -492,6 +522,8 @@
         private System.Windows.Forms.ToolStripComboBox tbcbWidth;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ComboBox width;
+        private System.Windows.Forms.ToolStripComboBox tbcbType;
+        private System.Windows.Forms.ToolStripComboBox tscbType;
     }
 }
 

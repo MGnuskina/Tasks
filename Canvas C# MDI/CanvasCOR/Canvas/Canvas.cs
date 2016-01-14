@@ -18,6 +18,7 @@ namespace Canvas
         private bool allowToDraw = false;
         Shape shape;
         int shapeIndex;
+        bool widthChange = true;
 
         public CanvasForm()
         {
@@ -30,23 +31,26 @@ namespace Canvas
             allowToDraw = true;
             panelCanvas1.Focus();
             shape = ShapeFactory.GetShapeInstance(cbType.SelectedItem.ToString(), e.X, e.Y,
-                1,1, Convert.ToInt16(width.SelectedItem), colorPanel.BackColor);
-            //shape.GotFocus
+                1, 1, Convert.ToInt16(width.SelectedItem), colorPanel.BackColor);
+            shape.MouseClick += SetFocus;
             panelCanvas1.AutoSize = false;
             panelCanvas1.Controls.Add(shape);
             shapeIndex = panelCanvas1.Controls.Count - 1;
+        }
+
+        private void SetFocus(object sender, MouseEventArgs e)
+        {
+            foreach (Shape shape in panelCanvas1.Controls)
+            {
+                shape.TabStop = false;
+            }
         }
 
         private void CanvasForm_MouseUp(object sender, MouseEventArgs e)
         {
             allowToDraw = false;
             panelCanvas1.Controls[0].BringToFront();
-            foreach(Shape shape in panelCanvas1.Controls)
-            {
-                //shape.MouseDown += CanvasForm_MouseDown;
-                //shape.MouseUp += CanvasForm_MouseUp;
-            }
-            
+            shape = null;
         }
 
         private void CanvasForm_Load(object sender, EventArgs e)
@@ -56,9 +60,11 @@ namespace Canvas
             cbType.SelectedIndex = 0;
             tscbWidth.SelectedIndex = 0;
             tbcbWidth.SelectedIndex = 0;
-            //tbcbWidth.VisibleChanged += Width_SelectedIndexChanged;
-            //tscbWidth.VisibleChanged += Width_SelectedIndexChanged;
-            //width.VisibleChanged += Width_SelectedIndexChanged;
+            tscbType.SelectedIndex = 0;
+            tbcbType.SelectedIndex = 0;
+            tbcbWidth.SelectedIndexChanged += Width_SelectedIndexChanged;
+            tscbWidth.SelectedIndexChanged += Width_SelectedIndexChanged;
+            width.SelectedIndexChanged += Width_SelectedIndexChanged;
         }
 
         private void colorPanel_Click(object sender, EventArgs e)
@@ -66,6 +72,15 @@ namespace Canvas
             if (colorDialog.ShowDialog() == DialogResult.OK)
             {
                 colorPanel.BackColor = colorDialog.Color;
+                Shape shapeNow;
+                foreach (Shape shape in panelCanvas1.Controls)
+                {
+                    if (shape.Focused)
+                    {
+                        shape.DrawPen = new Pen(colorPanel.BackColor, shape.DrawPen.Width);
+                        shape.Invalidate();
+                    }
+                }
             }
         }
 
@@ -83,26 +98,12 @@ namespace Canvas
 
         private void Width_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tscbWidth.SelectedIndex != tbcbWidth.SelectedIndex && tscbWidth.SelectedIndex != width.SelectedIndex)
+            if (widthChange)
             {
-                tbcbWidth.SelectedIndex = tscbWidth.SelectedIndex;
-                width.SelectedIndex = tscbWidth.SelectedIndex;
-            }
-            else
-            {
-                if (tscbWidth.SelectedIndex != tbcbWidth.SelectedIndex && tbcbWidth.SelectedIndex != width.SelectedIndex)
-                {
-                    tscbWidth.SelectedIndex = tbcbWidth.SelectedIndex;
-                    width.SelectedIndex = tbcbWidth.SelectedIndex;
-                }
-                else
-                {
-                    if (tscbWidth.SelectedIndex != width.SelectedIndex && tbcbWidth.SelectedIndex != width.SelectedIndex)
-                    {
-                        tscbWidth.SelectedIndex = width.SelectedIndex;
-                        tbcbWidth.SelectedIndex = width.SelectedIndex;
-                    }
-                }
+                widthChange = false;
+                tbcbWidth.SelectedItem = (sender as ComboBox).SelectedItem;
+                tscbWidth.SelectedItem = (sender as ComboBox).SelectedItem;
+                width.SelectedItem = (sender as ComboBox).SelectedItem;
             }
         }
 
@@ -156,5 +157,11 @@ namespace Canvas
                 panelCanvas1.Controls.Add(shape);
             }
         }
+
+        private void widthEnter(object sender, EventArgs e)
+        {
+            widthChange = true;
+        }
+
     }
 }

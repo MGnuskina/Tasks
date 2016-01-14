@@ -11,17 +11,19 @@ using System.Windows.Forms;
 
 namespace Canvas
 {
-    public partial class Shape : Control  ///do we need it?
+    public partial class Shape : Control
     {
         public int X { get; set; }
         public int Y { get; set; }
         public Pen DrawPen { get; set; }
+        private bool alowToMove { get; set; }
+        private Point pClicked { get; set; }
 
         public void ResizeShape(int xNew, int yNew)
         {
             int width = xNew - X;
             int height = yNew - Y;
-            if (xNew < X )
+            if (xNew < X)
             {
                 this.Location = new Point(xNew, this.Location.Y);
             }
@@ -29,11 +31,75 @@ namespace Canvas
             {
                 this.Location = new Point(this.Location.X, yNew);
             }
-
-            //this.ClientSize = new Size(Math.Abs(width),Math.Abs(height));
-            this.Size= new Size(Math.Abs(width), Math.Abs(height));
+            this.Size = new Size(Math.Abs(width), Math.Abs(height));
 
             this.Invalidate();
+        }
+
+        protected override void OnGotFocus(EventArgs e)
+        {
+            base.OnGotFocus(e);
+            Graphics graphics = this.CreateGraphics();
+            graphics.DrawRectangle(new Pen(GetSelectionColor(), 4), 1, 1, this.Width - 2, this.Height - 2);////if color is 255
+        }
+
+        protected override void OnLostFocus(EventArgs e)
+        {
+            base.OnLostFocus(e);
+            Graphics graphics = this.CreateGraphics();
+            graphics.DrawRectangle(new Pen(Color.White, 4), 1, 1, this.Width - 2, this.Height - 2);////if color is 255
+            //this.Invalidate();
+        }
+
+        private Color GetSelectionColor()
+        {
+            Color c = this.DrawPen.Color;
+            if (c.B > 50)
+            {
+                c = Color.FromArgb(c.R, c.G, c.B - 50);
+            }
+            else
+            {
+                c = Color.FromArgb(c.R, c.G, c.B + 50);
+            }
+            if (c.R > 110)
+            {
+                c = Color.FromArgb(c.R - 110, c.G, c.B);
+            }
+            else
+            {
+                c = Color.FromArgb(c.R + 110, c.G, c.B);
+            }
+            return c;
+        }
+
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            alowToMove = true;
+        }
+
+        protected override void OnMouseUp(MouseEventArgs e)
+        {
+            base.OnMouseUp(e);
+            alowToMove = false;
+        }
+
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            if (alowToMove)
+            {
+                this.Location = new Point(Math.Abs(e.X - (pClicked.X - this.Location.X)),Math.Abs( e.Y - (pClicked.Y - this.Location.Y)));
+                this.Invalidate();
+            }
+        }
+
+        protected override void OnMouseClick(MouseEventArgs e)
+        {
+            base.OnMouseClick(e);
+            this.Focus();
+            pClicked = new Point(e.X, e.Y);
         }
     }
 }

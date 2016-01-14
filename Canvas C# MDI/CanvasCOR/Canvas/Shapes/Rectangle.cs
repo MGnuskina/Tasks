@@ -24,14 +24,6 @@ namespace Canvas
             this.DrawPen = new Pen(color, lineWidth);
             this.X = X;
             this.Y = Y;
-
-            //System.Drawing.Drawing2D.GraphicsPath Button_Path = new System.Drawing.Drawing2D.GraphicsPath();
-            //Button_Path.AddRectangle(new System.Drawing.Rectangle(0, 0, this.Width, this.Height));
-            //Region Button_Region = new Region(Button_Path);
-            //this.Region = Button_Region;
-
-            //Graphics g = this.CreateGraphics();
-            //OnPaint(new PaintEventArgs(g, new System.Drawing.Rectangle(this.Location.X, this.Location.Y, this.Width, this.Height)));
         }
 
         protected override CreateParams CreateParams
@@ -40,7 +32,6 @@ namespace Canvas
             {
                 CreateParams cp = base.CreateParams;
                 cp.ExStyle |= 0x20;
-                cp.Style |= 0x840000;
                 return cp;
             }
         }
@@ -49,6 +40,13 @@ namespace Canvas
         {
             Graphics graphics = pe.Graphics;
             graphics.FillRectangle(new SolidBrush(this.DrawPen.Color), 0, 0, this.Width, this.Height);
+        }
+
+        protected override void OnLostFocus(EventArgs e)
+        {
+            base.OnLostFocus(e);
+            Graphics graphics = this.CreateGraphics();
+            graphics.DrawRectangle(new Pen(this.DrawPen.Color, 4), 1, 1, this.Width - 2, this.Height - 2);////if color is 255
         }
     }
 }

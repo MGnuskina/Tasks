@@ -19,7 +19,7 @@ namespace Canvas
             this.BackColor = color;
             this.Width = width;
             this.Height = height;
-            this.DrawPen = new Pen(this.BackColor, lineWidth);//local veriable
+            this.DrawPen = new Pen(this.BackColor, lineWidth);
 
             System.Drawing.Drawing2D.GraphicsPath Button_Path = new System.Drawing.Drawing2D.GraphicsPath();
 
