@@ -28,15 +28,15 @@ namespace Canvas.Serelization
 
         public ShapeMemento CreateMemento()
         {
-            List<ShapeData> mBalls = new List<ShapeData>();
+            List<ShapeData> mShapes = new List<ShapeData>();
             foreach (Shape shape in shapes)
             {
                 string type = (shape.GetType()).ToString();
                 type = type.Substring(type.IndexOf(".") + 1);
-                mBalls.Add(new ShapeData(shape.Location.X, shape.Location.Y, shape.Width, shape.Height, 
+                mShapes.Add(new ShapeData(shape.Location.X, shape.Location.Y, shape.Width, shape.Height, 
                     Convert.ToInt32(shape.DrawPen.Width), type , shape.DrawPen.Color ));
             }
-            return new ShapeMemento(mBalls);
+            return new ShapeMemento(mShapes);
         }
     }
 }

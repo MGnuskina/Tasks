@@ -42,6 +42,7 @@ namespace Canvas
         {
             base.OnPaint(pe);
             Graphics graphics = pe.Graphics;
+            graphics.FillRectangle(new SolidBrush(Color.White), 0, 0, this.Width, this.Height);
             graphics.DrawEllipse(this.DrawPen, 0, 0, this.Width-1, this.Height-1);// DrawPen.Width, DrawPen.Width, this.Width - DrawPen.Width - 1, this.Height - DrawPen.Width - 1);
         }
     }

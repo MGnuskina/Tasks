@@ -52,6 +52,7 @@ namespace Canvas
         {
 
             Graphics graphics = pe.Graphics;
+            graphics.FillRectangle(new SolidBrush(Color.White), 0, 0, this.Width, this.Height);
             graphics.DrawLine(this.DrawPen, 0, 0, this.Width, this.Height);///x2,y2
 
             //using (SolidBrush brush = new SolidBrush(DrawPen.Color))

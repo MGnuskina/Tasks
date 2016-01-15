@@ -39,17 +39,12 @@ namespace Canvas
         protected override void OnGotFocus(EventArgs e)
         {
             base.OnGotFocus(e);
-            Graphics graphics = this.CreateGraphics();
-            graphics.DrawRectangle(new Pen(GetSelectionColor(), 4), 1, 1, this.Width - 2, this.Height - 2);////if color is 255
-            this.Invalidate();
         }
 
         protected override void OnLostFocus(EventArgs e)
         {
             base.OnLostFocus(e);
-            Graphics graphics = this.CreateGraphics();
-            graphics.DrawRectangle(new Pen(Color.White, 4), 1, 1, this.Width - 2, this.Height - 2);////if color is 255
-            //this.Invalidate();
+            this.Invalidate();
         }
 
         private Color GetSelectionColor()
@@ -99,8 +94,11 @@ namespace Canvas
         protected override void OnMouseClick(MouseEventArgs e)
         {
             base.OnMouseClick(e);
-            this.Focus();
-            pClicked = new Point(e.X, e.Y);
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Focus();
+                pClicked = new Point(e.X, e.Y);
+            }
         }
     }
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <ArrayOfShapeData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ShapeData>
-    <X>49</X>
-    <Y>48</Y>
-    <Width>123</Width>
-    <Height>116</Height>
+    <X>319</X>
+    <Y>60</Y>
+    <Width>216</Width>
+    <Height>103</Height>
     <LineWidth>2</LineWidth>
     <Type>Line</Type>
     <Color>
@@ -14,10 +14,10 @@
     </Color>
   </ShapeData>
   <ShapeData>
-    <X>318</X>
-    <Y>49</Y>
-    <Width>98</Width>
-    <Height>78</Height>
+    <X>161</X>
+    <Y>91</Y>
+    <Width>135</Width>
+    <Height>83</Height>
     <LineWidth>2</LineWidth>
     <Type>Line</Type>
     <Color>
@@ -27,51 +27,12 @@
     </Color>
   </ShapeData>
   <ShapeData>
-    <X>202</X>
-    <Y>94</Y>
-    <Width>25</Width>
-    <Height>23</Height>
+    <X>137</X>
+    <Y>37</Y>
+    <Width>147</Width>
+    <Height>47</Height>
     <LineWidth>2</LineWidth>
     <Type>Line</Type>
-    <Color>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-    </Color>
-  </ShapeData>
-  <ShapeData>
-    <X>297</X>
-    <Y>186</Y>
-    <Width>96</Width>
-    <Height>76</Height>
-    <LineWidth>2</LineWidth>
-    <Type>Rectangle</Type>
-    <Color>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-    </Color>
-  </ShapeData>
-  <ShapeData>
-    <X>49</X>
-    <Y>182</Y>
-    <Width>121</Width>
-    <Height>98</Height>
-    <LineWidth>2</LineWidth>
-    <Type>Line</Type>
-    <Color>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-    </Color>
-  </ShapeData>
-  <ShapeData>
-    <X>196</X>
-    <Y>299</Y>
-    <Width>104</Width>
-    <Height>64</Height>
-    <LineWidth>2</LineWidth>
-    <Type>Elipse</Type>
     <Color>
       <int>0</int>
       <int>0</int>
