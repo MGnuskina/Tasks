@@ -28,10 +28,7 @@ namespace Canvas
         private void CanvasForm_MouseDown(object sender, MouseEventArgs e)
         {
             allowToDraw = true;
-            //currentPanel.Focus();
-            tmpShape = ShapeFactory.GetShapeInstance(cbType.SelectedItem.ToString(), e.X, e.Y,
-                1, 1, Convert.ToInt16(width.SelectedItem), colorPanel.BackColor);
-            //currentPanel.AutoSize = false;
+            tmpShape = ShapeFactory.GetShapeInstance(cbType.SelectedItem.ToString(), e.X, e.Y,1, 1, Convert.ToInt16(width.SelectedItem), colorPanel.BackColor);
             tabControlCanvas.SelectedTab.Controls[0].Controls.Add(tmpShape);
             shapeIndex = tabControlCanvas.SelectedTab.Controls[0].Controls.Count - 1;
         }
@@ -43,7 +40,7 @@ namespace Canvas
             tabControlCanvas.SelectedTab.Controls[0].Controls[tabControlCanvas.SelectedTab.Controls[0].Controls.Count - 1].LostFocus += ShapeLoseFocus;
             tabControlCanvas.SelectedTab.Controls[0].Controls[tabControlCanvas.SelectedTab.Controls[0].Controls.Count - 1].GotFocus += ShapeGetFocus;
             tabControlCanvas.SelectedTab.Controls[0].Controls[tabControlCanvas.SelectedTab.Controls[0].Controls.Count - 1].MouseClick += ContexMenuShowOnRightMouseClick;
-            tmpShape = null;
+            tmpShape = null;//tabControlCanvas.SelectedTab.Controls[0].Controls[tabControlCanvas.SelectedTab.Controls[0].Controls.Count - 1] as Shape;//null;
         }
 
         private void CanvasForm_Load(object sender, EventArgs e)
@@ -254,7 +251,7 @@ namespace Canvas
         {
             if (!Change)
             {
-                tmpShape = null;
+              //  tmpShape = null;
             }
         }
 
@@ -278,15 +275,9 @@ namespace Canvas
             if (e.Button == MouseButtons.Right)
             {
                 contextMenuStripRightMouseClick.Enabled = true;
+                contextMenuStripRightMouseClick.BringToFront();
                 contextMenuStripRightMouseClick.Show(Cursor.Position);
                 contextMenuStripRightMouseClick.Visible = true;
-                //foreach(Shape shape in tabControlCanvas.SelectedTab.Controls[0].Controls)
-                //{
-                //    if (shape.Focused)
-                //    {
-                //        shapeIndex = tabControlCanvas.SelectedTab.Controls[0].Controls.IndexOf(shape);
-                //    }
-                //}
             }
         }
     }

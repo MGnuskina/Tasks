@@ -46,8 +46,6 @@ namespace Canvas
         protected override void OnLostFocus(EventArgs e)
         {
             base.OnLostFocus(e);
-            //Graphics graphics = this.CreateGraphics();
-            //graphics.DrawRectangle(new Pen(this.DrawPen.Color, 4), 1, 1, this.Width - 2, this.Height - 2);
         }
     }
 }
