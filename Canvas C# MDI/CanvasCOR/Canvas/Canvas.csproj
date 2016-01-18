@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormData.cs" />
     <Compile Include="Serelization\CSVFiles.cs" />
     <Compile Include="Serelization\ShapeMemento.cs" />
     <Compile Include="Serelization\ShapeOriginator.cs" />
@@ -128,7 +129,16 @@
     <Compile Include="Serelization\ShapeData.cs" />
     <Compile Include="Serelization\XMLFiles.cs" />
     <Compile Include="Serelization\YAMLFiles.cs" />
+    <EmbeddedResource Include="Canvas.en.resx">
+      <DependentUpon>Canvas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Canvas.resx">
+      <DependentUpon>Canvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Canvas.ru.resx">
+      <DependentUpon>Canvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Canvas.uk.resx">
       <DependentUpon>Canvas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -139,6 +149,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

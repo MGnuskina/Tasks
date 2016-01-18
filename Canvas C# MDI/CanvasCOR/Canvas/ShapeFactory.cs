@@ -32,5 +32,12 @@ namespace Canvas
             }
             return shape;
         }
+
+        static string[] typesArray=new string[]{"Line","Rectangle","Elipse","RoundRectangle","Fozy"};
+
+        public static string GetTypeByNumber(int Num)
+        {
+            return typesArray[Num];
+        }
     }
 }

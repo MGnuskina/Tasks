@@ -117,46 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolStripLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 25</value>
   </data>
-  <data name="Color" xml:space="preserve">
-    <value>Color</value>
-  </data>
-  <data name="Data" xml:space="preserve">
-    <value>Data</value>
-  </data>
-  <data name="DeleteTab" xml:space="preserve">
-    <value>Delete Tab</value>
-  </data>
-  <data name="File" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="Lenguage" xml:space="preserve">
-    <value>Lenguage</value>
-  </data>
-  <data name="Load" xml:space="preserve">
-    <value>Load</value>
-  </data>
-  <data name="MoveLeft" xml:space="preserve">
-    <value>Move Left</value>
-  </data>
-  <data name="MoveRight" xml:space="preserve">
-    <value>Move Right</value>
-  </data>
-  <data name="NewTab" xml:space="preserve">
-    <value>New Tab</value>
-  </data>
-  <data name="Save" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="Tabs" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="Type" xml:space="preserve">
-    <value>Type</value>
-  </data>
-  <data name="Width" xml:space="preserve">
-    <value>Width</value>
+  <data name="toolStripLabel5.Text" xml:space="preserve">
+    <value>Style</value>
   </data>
 </root>

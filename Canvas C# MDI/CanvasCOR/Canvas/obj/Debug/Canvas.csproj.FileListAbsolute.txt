@@ -55,7 +55,6 @@ C:\Users\Mariya\Documents\GitHub\Tasks\SaveLoadTask\Canvas C#\CanvasCOR\Canvas\b
 C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\bin\Debug\Canvas.exe.config
 C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.exe
 C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.pdb
-C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.csprojResolveAssemblyReference.cache
 C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.CanvasForm.resources
 C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.Properties.Resources.resources
 C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.csproj.GenerateResource.Cache
@@ -90,3 +89,13 @@ c:\Users\Marusya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug
 c:\Users\Marusya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.csproj.GenerateResource.Cache
 c:\Users\Marusya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.exe
 c:\Users\Marusya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\bin\Debug\en\Canvas.resources.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.CanvasForm.en.resources
+C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\en\Canvas.resources.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\bin\Debug\ru\Canvas.resources.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.CanvasForm.ru.resources
+C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\ru\Canvas.resources.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\bin\Debug\uk\Canvas.resources.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.CanvasForm.uk.resources
+C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\uk\Canvas.resources.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Canvas C# MDI\CanvasCOR\Canvas\obj\Debug\Canvas.csprojResolveAssemblyReference.cache

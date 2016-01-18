@@ -14,6 +14,7 @@ namespace Canvas
     public partial class Shape : Control
     {
         public int X { get; set; }
+        private int dx, dy;
         public int Y { get; set; }
         public Pen DrawPen { get; set; }
         private bool alowToMove { get; set; }
@@ -73,6 +74,9 @@ namespace Canvas
         {
             base.OnMouseDown(e);
             alowToMove = true;
+            dx = 0;
+            dy = 0;
+            pClicked = new Point(e.X, e.Y);
         }
 
         protected override void OnMouseUp(MouseEventArgs e)
@@ -86,7 +90,9 @@ namespace Canvas
             base.OnMouseMove(e);
             if (alowToMove)
             {
-                this.Location = new Point(Math.Abs(e.X - (pClicked.X - this.Location.X)),Math.Abs( e.Y - (pClicked.Y - this.Location.Y)));
+                dx = (pClicked.X - this.Location.X);
+                dy = (pClicked.Y - this.Location.Y);
+                this.Location = new Point(Math.Abs(e.X - dx), Math.Abs(e.Y - dy));
                 this.Invalidate();
             }
         }
