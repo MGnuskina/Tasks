@@ -21,7 +21,7 @@ namespace Canvas
         FormData data = new FormData();
         int shapeIndex;
         BindingSource binding = new BindingSource();
-        
+        static IList<string> listType;
 
         public CanvasForm()
         {
@@ -35,13 +35,12 @@ namespace Canvas
             tbcbType.SelectedIndex = 1;
             cmtscmType.SelectedIndex = 1;
             cmtscbWidth.SelectedIndex = 0;
-            //listType = new List<string>() { "List", "Rectangle", "Elipse", "RoundRectangle", "Fozy" };
+            listType = new List<string>() { "List", "Rectangle", "Elipse", "RoundRectangle", "Fozy" };
         }
 
         public void Binding()
         {
             IList<int> listWidth = new List<int> { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 };
-            IList<string> listType = new List<string>() { "List", "Rectangle", "Elipse", "RoundRectangle", "Fozy" };
 
             cbType.DataSource = listType;
             cbType.DataBindings.Add("SelectedItem", binding, "Type");
@@ -122,10 +121,10 @@ namespace Canvas
         {
             if (e.Button == MouseButtons.Right)
             {
-                contextMenuStripRightMouseClick.Enabled = true;
+              //  contextMenuStripRightMouseClick.Enabled = true;
                 contextMenuStripRightMouseClick.BringToFront();
                 contextMenuStripRightMouseClick.Show(Cursor.Position);
-                contextMenuStripRightMouseClick.Visible = true;
+               // contextMenuStripRightMouseClick.Visible = true;
             }
         }
 

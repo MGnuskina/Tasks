@@ -45,8 +45,9 @@ namespace Canvas
                     tmpShape.Height, tmpShape.Width, Convert.ToInt16(width.SelectedItem), colorPanel.BackColor);
                 tabControlCanvas.SelectedTab.Controls[0].Controls.RemoveAt(index);
                 tabControlCanvas.SelectedTab.Controls[0].Controls.Add(shape);
-                tabControlCanvas.SelectedTab.Controls[0].Controls[index].Focus();
-                tmpShape = tabControlCanvas.SelectedTab.Controls[0].Controls[index] as Shape;
+                // tabControlCanvas.SelectedTab.Controls[0].Controls[index].Focus();
+                //  tmpShape = tabControlCanvas.SelectedTab.Controls[0].Controls[index] as Shape;
+                tmpShape = null;
             }
         }
 
@@ -63,8 +64,8 @@ namespace Canvas
                         shape.Invalidate();
                     }
                 }
-                contextMenuStripRightMouseClick.Visible = false;
-                contextMenuStripRightMouseClick.Enabled = false;
+               // contextMenuStripRightMouseClick.Visible = false;
+                //contextMenuStripRightMouseClick.Enabled = false;
             }
         }
     }

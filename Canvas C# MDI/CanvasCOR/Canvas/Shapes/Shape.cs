@@ -19,6 +19,7 @@ namespace Canvas
         public Pen DrawPen { get; set; }
         private bool alowToMove { get; set; }
         private Point pClicked { get; set; }
+        private bool resize = false;
 
         public void ResizeShape(int xNew, int yNew)
         {
@@ -73,16 +74,26 @@ namespace Canvas
         protected override void OnMouseDown(MouseEventArgs e)
         {
             base.OnMouseDown(e);
-            alowToMove = true;
-            dx = 0;
-            dy = 0;
-            pClicked = new Point(e.X, e.Y);
+            if (e.X > Width-10 && e.Y > Height - 10)
+            {
+                resize = true;
+                X = this.Location.X;
+                Y = this.Location.Y;
+            }
+            else
+            {
+                alowToMove = true;
+                dx = 0;
+                dy = 0;
+                pClicked = new Point(e.X, e.Y);
+            }
         }
 
         protected override void OnMouseUp(MouseEventArgs e)
         {
             base.OnMouseUp(e);
             alowToMove = false;
+            resize = false;
         }
 
         protected override void OnMouseMove(MouseEventArgs e)
@@ -94,6 +105,13 @@ namespace Canvas
                 dy = (pClicked.Y - this.Location.Y);
                 this.Location = new Point(Math.Abs(e.X - dx), Math.Abs(e.Y - dy));
                 this.Invalidate();
+            }
+            else
+            {
+                if (resize)
+                {
+                    ResizeShape(this.Location.X+e.X,this.Location.Y+ e.Y);
+                }
             }
         }
 

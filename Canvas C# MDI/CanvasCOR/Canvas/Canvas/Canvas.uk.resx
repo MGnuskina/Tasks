@@ -319,6 +319,9 @@
   <data name="cmtscmType.Items4" xml:space="preserve">
     <value>Крива</value>
   </data>
+  <data name="colorToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Колір</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Канвас</value>
   </data>

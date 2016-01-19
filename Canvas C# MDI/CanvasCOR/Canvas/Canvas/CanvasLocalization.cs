@@ -41,6 +41,7 @@ namespace Canvas
             {
                 LocalizeForm(frm);
             }
+            
         }
 
         private static void LocalizeForm(Form frm)
@@ -48,6 +49,7 @@ namespace Canvas
             var manager = new ComponentResourceManager(frm.GetType());
             manager.ApplyResources(frm, "$this");
             ApplyResources(manager, frm.Controls);
+            
         }
 
         private static void ApplyResources(ComponentResourceManager manager, Control.ControlCollection ctls)
@@ -67,39 +69,42 @@ namespace Canvas
                     }
                     else
                     {
-                        if (ctl.Name == "cbType")
-                        {
-                            //listType = new List<string>();
-                            //ctl.DataBindings.Clear();
-                            //var cmbBox = manager as ComboBox;
-                            //int i = cmbBox.Items.Count;
-                            ////cmbBox.Items.Clear();
-                            //for (int j = 0; j < i; j++)
-                            //{
-                            //    var str = "";
-                            //    if (j == 0)
-                            //    {
-                            //        //str = string.Format("{0}.Items", cmbBox.Name);
-                            //        str = cmbBox.Items[j].ToString();
-                            //    }
-                            //    else
-                            //    {
-                            //        str = string.Format("{0}.Items{1}", cmbBox.Name, j);
-                            //        str = cmbBox.Items[j].ToString();
-                            //    }
-                            //    listType.Add(str);
-                            //    cmbBox.Items.AddRange(new object[]
-                            //    {
-                            //        manager.GetString(str)
-                            //    });
-                            //}
-                            
-                        }
-                        else
+                        //if (ctl.Name == "cbType")
+                        //{
+                        //    listType = new List<string>();
+                        //    ctl.DataBindings.Clear();
+                        //    var cmbBox = ctl as ComboBox;
+                        //    //cmbBox.DataSource = null;
+                        //    int i = cmbBox.Items.Count;
+                        //    cmbBox.Items.Clear();
+                        //    for (int j = 0; j < i; j++)
+                        //    {
+                        //        var str = "";
+                        //        if (j == 0)
+                        //        {
+                        //            str = string.Format("{0}.Items", cmbBox.Name);
+                        //        }
+                        //        else
+                        //        {
+                        //            str = string.Format("{0}.Items{1}", cmbBox.Name, j);
+                        //        }
+                        //        listType.Add(manager.GetString(str));
+                        //        cmbBox.DataSource = listType;
+                        //        cmbBox.Items.AddRange(new object[]
+                        //        {
+                        //            manager.GetString(str)
+                        //        });
+                        //    }
+
+                        //}
+                        //else
+                        //{
                             ApplyResources(manager, ctl.Controls);
+                       // }
                     }
                 }
             }
+            //ApplyResourcesContextMenuStrip(manager, contextMenuStripRightMouseClick.Items);
         }
 
         private static void ApplyResourcesMenuItems(ComponentResourceManager manager, ToolStripItemCollection items)
@@ -128,6 +133,23 @@ namespace Canvas
                     {
                         manager.ApplyResources(item, (item as ToolStripButton).Name);
                     }
+                }
+            }
+        }
+
+
+        private static void ApplyResourcesContextMenuStrip(ComponentResourceManager manager, ToolStripItemCollection items)
+        {
+            foreach (var item in items)
+            {
+                if (item is ToolStripMenuItem)
+                {
+                    ApplyResourcesMenuItems(manager, (item as ToolStripMenuItem).DropDown.Items);
+                    manager.ApplyResources(item, (item as ToolStripMenuItem).Name);
+                }
+                if (item is ToolStripComboBox)
+                {
+                    manager.ApplyResources(item, (item as ToolStripComboBox).Name);
                 }
             }
         }

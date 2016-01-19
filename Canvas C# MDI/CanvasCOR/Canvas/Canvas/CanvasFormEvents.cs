@@ -25,6 +25,25 @@ namespace Canvas
             tabControlCanvas.SelectedTab.Controls[0].Controls[tabControlCanvas.SelectedTab.Controls[0].Controls.Count - 1].MouseClick += ContexMenuShowOnRightMouseClick;
             tabControlCanvas.SelectedTab.Controls[0].Controls[tabControlCanvas.SelectedTab.Controls[0].Controls.Count - 1].MouseMove += ShowLableData;
             tmpShape = null;
+            tabControlCanvas.SelectedTab.Controls[0].Controls[tabControlCanvas.SelectedTab.Controls[0].Controls.Count - 1].Enter += GetDataFromShape;
+        }
+
+        private void GetDataFromShape(object sender, EventArgs e)
+        {
+            foreach (var shape in tabControlCanvas.SelectedTab.Controls)
+            {
+                if (shape is Shape)
+                {
+                    if (shape != (sender as Shape))
+                    {
+                        (shape as Shape).Enabled = false;
+                    }
+                }
+            }
+            tmpShape = (sender as Shape);
+            data.LineWidth = (int)(sender as Shape).DrawPen.Width;
+            data.Type = tmpShape.GetType().ToString();
+            colorPanel.BackColor = (sender as Shape).DrawPen.Color;
         }
 
         private void CanvasForm_Load(object sender, EventArgs e)
@@ -42,8 +61,8 @@ namespace Canvas
             moveLeftToolStripMenuItem.Enabled = false;
             moveRightToolStripMenuItem.Enabled = false;
             deleteTabToolStripMenuItem.Enabled = false;
-            contextMenuStripRightMouseClick.Visible = false;
-            contextMenuStripRightMouseClick.Enabled = false;
+            //contextMenuStripRightMouseClick.Visible = false;
+            //  contextMenuStripRightMouseClick.Enabled = false;
             tscbLenguage.ComboBox.SelectedIndex = 0;
             tscbStyle.ComboBox.SelectedIndex = 0;
             //listType = new List<string> { "List", "Rectangle", "Elipse", "RoundRectangle", "Fozy" };
