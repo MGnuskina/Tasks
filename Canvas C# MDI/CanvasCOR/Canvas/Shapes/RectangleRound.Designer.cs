@@ -1,6 +1,6 @@
 ﻿namespace Canvas
 {
-    partial class RoundElipse
+    partial class RectangleRound
     {
         /// <summary>
         /// Required designer variable.

@@ -23,8 +23,8 @@ namespace Canvas
                 case "Fozy":
                     shape = new Elipse(X, Y, height, width, lineWidth, color);
                     break;
-                case "RoundElipse":
-                    shape = new Elipse(X, Y, height, width, lineWidth, color);
+                case "RectangleRound":
+                    shape = new RectangleRound(X, Y, height, width, lineWidth, color);
                     break;
                 default:
                     shape = new Line(X, Y, height, width, lineWidth, color);
@@ -33,7 +33,7 @@ namespace Canvas
             return shape;
         }
 
-        static string[] typesArray=new string[]{"Line","Rectangle","Elipse","RoundRectangle","Fozy"};
+        static string[] typesArray=new string[]{"Line","Rectangle","Elipse", "RectangleRound", "Fozy"};
 
         public static string GetTypeByNumber(int Num)
         {

@@ -119,190 +119,199 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 20</value>
+    <value>38, 16</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Колір:</value>
+    <value>Цвет:</value>
+  </data>
+  <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 26</value>
+  </data>
+  <data name="saveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="loadToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 26</value>
+  </data>
+  <data name="loadToolStripMenuItem.Text" xml:space="preserve">
+    <value>Загрузить</value>
+  </data>
+  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 26</value>
+  </data>
+  <data name="closeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Закрыть</value>
   </data>
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 24</value>
+    <value>52, 21</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>Файл</value>
   </data>
-  <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 26</value>
-  </data>
-  <data name="saveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Зберегти</value>
-  </data>
-  <data name="loadToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 26</value>
-  </data>
-  <data name="loadToolStripMenuItem.Text" xml:space="preserve">
-    <value>Завантажити</value>
-  </data>
-  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 26</value>
-  </data>
-  <data name="closeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Закрити</value>
-  </data>
-  <data name="colorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 24</value>
-  </data>
   <data name="colorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Колір</value>
+    <value>Цвет</value>
   </data>
   <data name="widthToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 24</value>
+    <value>70, 21</value>
   </data>
   <data name="widthToolStripMenuItem.Text" xml:space="preserve">
     <value>Ширина</value>
   </data>
+  <data name="tscbType.Items" xml:space="preserve">
+    <value>Линия</value>
+  </data>
+  <data name="tscbType.Items1" xml:space="preserve">
+    <value>Прямоугольник</value>
+  </data>
+  <data name="tscbType.Items2" xml:space="preserve">
+    <value>Елипс</value>
+  </data>
+  <data name="tscbType.Items3" xml:space="preserve">
+    <value>Закруглянный прямоугольник</value>
+  </data>
+  <data name="tscbType.Items4" xml:space="preserve">
+    <value>Кривая</value>
+  </data>
   <data name="heightToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 24</value>
+    <value>43, 21</value>
   </data>
   <data name="heightToolStripMenuItem.Text" xml:space="preserve">
     <value>Тип</value>
   </data>
-  <data name="tscbType.Items" xml:space="preserve">
-    <value>Лінія</value>
+  <data name="newTabToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 26</value>
   </data>
-  <data name="tscbType.Items1" xml:space="preserve">
-    <value>Прямокутник</value>
+  <data name="newTabToolStripMenuItem.Text" xml:space="preserve">
+    <value>Новая вкладка</value>
   </data>
-  <data name="tscbType.Items2" xml:space="preserve">
-    <value>Еліпс</value>
+  <data name="deleteTabToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 26</value>
   </data>
-  <data name="tscbType.Items3" xml:space="preserve">
-    <value>Закругений прямокутник</value>
+  <data name="deleteTabToolStripMenuItem.Text" xml:space="preserve">
+    <value>Удалить вкладку</value>
   </data>
-  <data name="tscbType.Items4" xml:space="preserve">
-    <value>Крива</value>
+  <data name="moveLeftToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 26</value>
+  </data>
+  <data name="moveLeftToolStripMenuItem.Text" xml:space="preserve">
+    <value>Переути на вкладку левей</value>
+  </data>
+  <data name="moveRightToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 26</value>
+  </data>
+  <data name="moveRightToolStripMenuItem.Text" xml:space="preserve">
+    <value>Перейти на вкладку правей</value>
   </data>
   <data name="tabsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 24</value>
+    <value>73, 21</value>
   </data>
   <data name="tabsToolStripMenuItem.Text" xml:space="preserve">
     <value>Вкладки</value>
   </data>
-  <data name="newTabToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
-  </data>
-  <data name="newTabToolStripMenuItem.Text" xml:space="preserve">
-    <value>Нова вкладка</value>
-  </data>
-  <data name="deleteTabToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
-  </data>
-  <data name="deleteTabToolStripMenuItem.Text" xml:space="preserve">
-    <value>Видалити вкладку</value>
-  </data>
-  <data name="moveLeftToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
-  </data>
-  <data name="moveLeftToolStripMenuItem.Text" xml:space="preserve">
-    <value>Наступна вкладка зліва</value>
-  </data>
-  <data name="moveRightToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
-  </data>
-  <data name="moveRightToolStripMenuItem.Text" xml:space="preserve">
-    <value>Наступна вкладка справа</value>
-  </data>
   <data name="tabPageCanvas1.Text" xml:space="preserve">
     <value>Канвас</value>
   </data>
-  <data name="toolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 25</value>
-  </data>
   <data name="toolStripButton1.Text" xml:space="preserve">
-    <value>Колір</value>
+    <value>Цвет</value>
   </data>
   <data name="toolStripLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 25</value>
+    <value>61, 25</value>
   </data>
   <data name="toolStripLabel1.Text" xml:space="preserve">
     <value>Ширина:</value>
   </data>
   <data name="toolStripLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 25</value>
+    <value>34, 25</value>
   </data>
   <data name="toolStripLabel2.Text" xml:space="preserve">
     <value>Тип:</value>
   </data>
   <data name="tbcbType.Items" xml:space="preserve">
-    <value>Лінія</value>
+    <value>Линия</value>
   </data>
   <data name="tbcbType.Items1" xml:space="preserve">
-    <value>Прямокутник</value>
+    <value>Прямоугольник</value>
   </data>
   <data name="tbcbType.Items2" xml:space="preserve">
-    <value>Еліпс</value>
+    <value>Елипс</value>
   </data>
   <data name="tbcbType.Items3" xml:space="preserve">
-    <value>Закругений прямокутник</value>
+    <value>Закруглянный прямоугольник</value>
   </data>
   <data name="tbcbType.Items4" xml:space="preserve">
-    <value>Крива</value>
+    <value>Кривая</value>
   </data>
   <data name="toolStripLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 25</value>
+    <value>44, 25</value>
   </data>
   <data name="toolStripLabel3.Text" xml:space="preserve">
-    <value>Мова</value>
+    <value>Язык:</value>
   </data>
   <data name="toolStripLabel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 25</value>
+    <value>131, 25</value>
   </data>
   <data name="toolStripLabel5.Text" xml:space="preserve">
-    <value>Стиль відображення</value>
+    <value>Стиль отображения</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
+    <value>34, 16</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Тип:</value>
   </data>
   <data name="cbType.Items" xml:space="preserve">
-    <value>Лінія</value>
+    <value>Линия</value>
   </data>
   <data name="cbType.Items1" xml:space="preserve">
-    <value>Прямокутник</value>
+    <value>Прямоугольник</value>
   </data>
   <data name="cbType.Items2" xml:space="preserve">
-    <value>Еліпс</value>
+    <value>Елипс</value>
   </data>
   <data name="cbType.Items3" xml:space="preserve">
-    <value>Закругений прямокутник</value>
+    <value>Закруглянный прямоугольник</value>
   </data>
   <data name="cbType.Items4" xml:space="preserve">
-    <value>Крива</value>
+    <value>Кривая</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
+    <value>58, 16</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Ширина:</value>
   </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 165</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Дані:</value>
-  </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
+    <value>53, 16</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Висота:</value>
+    <value>Высота:</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
+    <value>58, 16</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Ширина:</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 156</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Данные:</value>
+  </data>
+  <data name="cmtscmType.Items" xml:space="preserve">
+    <value>Линия</value>
+  </data>
+  <data name="cmtscmType.Items1" xml:space="preserve">
+    <value>Прямоугольник</value>
+  </data>
+  <data name="cmtscmType.Items2" xml:space="preserve">
+    <value>Елипс</value>
+  </data>
+  <data name="cmtscmType.Items3" xml:space="preserve">
+    <value>Закруглянный прямоугольник</value>
+  </data>
+  <data name="cmtscmType.Items4" xml:space="preserve">
+    <value>Кривая</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Канвас</value>

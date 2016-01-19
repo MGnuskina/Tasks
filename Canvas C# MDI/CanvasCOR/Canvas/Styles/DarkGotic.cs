@@ -1,0 +1,179 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Canvas
+{
+    public static class DarkGotic
+    {
+        static void ApplyTheme(Label c)
+        {
+            c.Font = new Font("Franklin Gothic", 9.0f);
+            c.BackColor = Color.Black;
+            c.ForeColor = Color.LightGray;
+        }
+
+        static void ApplyTheme(ComboBox c)
+        {
+            c.Font = new Font("Franklin Gothic", 9.0f);
+            c.BackColor = Color.Black;
+            c.ForeColor = Color.LightGray;
+            c.FlatStyle = FlatStyle.Popup;
+        }
+
+        static void ApplyTheme(Form c)
+        {
+            c.BackColor = Color.Black;
+            c.ForeColor = Color.LightGray;
+        }
+
+        static void ApplyTheme(ToolStrip c)
+        {
+            c.Font = new Font("Franklin Gothic", 9.0f);
+            c.BackColor = Color.Black;
+            c.ForeColor = Color.LightGray;
+            for (int i = 0; i < c.Items.Count; i++)
+            {
+                if (c.Items[i] is ToolStripComboBox)
+                {
+                    ApplyTheme(c.Items[i] as ToolStripComboBox);
+                }
+            }
+        }
+
+        static void ApplyTheme(GroupBox c)
+        {
+            c.Font = new Font("Franklin Gothic", 9.0f);
+            c.BackColor = Color.Black;
+            c.ForeColor = Color.LightGray;
+        }
+
+        static void ApplyTheme(MenuStrip c)
+        {
+            c.Font = new Font("Franklin Gothic", 9.0f);
+            c.BackColor = Color.Black;
+            c.ForeColor = Color.LightGray;
+            foreach (var cb in c.Items)
+            {
+                if (cb is ToolStripComboBox)
+                {
+                    ApplyTheme(cb as ToolStripComboBox);
+                }
+                if (cb is ToolStripMenuItem)
+                {
+                    ApplyTheme(cb as ToolStripMenuItem);
+                }
+            }
+        }
+
+        static void ApplyTheme(ToolStripComboBox c)
+        {
+            c.ComboBox.Font = new Font("Franklin Gothic", 9.0f);
+            c.ComboBox.BackColor = Color.Black;
+            c.ComboBox.ForeColor = Color.LightGray;
+            c.FlatStyle = FlatStyle.Popup;
+        }
+
+        static void ApplyTheme(ToolStripMenuItem c)
+        {
+            c.Font = new Font("Franklin Gothic", 9.0f);
+            c.BackColor = Color.Black;
+            c.ForeColor = Color.LightGray;
+            foreach (var cb in c.DropDown.Items)
+            {
+                if (cb is ToolStripComboBox)
+                {
+                    ApplyTheme(cb as ToolStripComboBox);
+                }
+                if (cb is ToolStripMenuItem)
+                {
+                    ApplyTheme(cb as ToolStripMenuItem);
+                }
+                c.DropDown.BackColor = Color.Black;
+            }
+        }
+
+        static void ApplyTheme(TabControl c)
+        {
+            c.Font = new Font("Franklin Gothic", 9.0f);
+            c.BackColor = Color.Black;
+            c.ForeColor = Color.LightGray;
+            foreach(var tb in c.TabPages)
+            {
+                ApplyTheme(tb as TabPage);
+            }
+        }
+
+        static void ApplyTheme(TabPage c)
+        {
+            c.Font = new Font("Franklin Gothic", 9.0f);
+            c.BackColor = Color.Black;
+            c.ForeColor = Color.LightGray;
+        }
+
+        static void ApplyTheme(Panel c)
+        {
+            c.Font = new Font("Franklin Gothic", 9.0f);
+        }
+
+        public static void ApplyThemeContextMenu(ContextMenuStrip c)
+        {
+            c.Font = new Font("Franklin Gothic", 9.0f);
+            c.BackColor = Color.Black;
+            c.ForeColor = Color.LightGray;
+            foreach (var tb in c.Items)
+            {
+                if (tb is ToolStripMenuItem)
+                {
+                    ApplyTheme(tb as ToolStripMenuItem);
+                }
+                else
+                {
+                    if(tb is ToolStripComboBox)
+                    {
+                        ApplyTheme(tb as ToolStripComboBox);
+                    }
+                }
+            }
+        }
+
+        public static void UseTheme(Form form)
+        {
+            ApplyTheme(form);
+            foreach (var c in form.Controls)
+            {
+                switch (c.GetType().ToString())
+                {
+                    case "System.Windows.Forms.ToolStrip":
+                        ApplyTheme((ToolStrip)c);
+                        break;
+                    case "System.Windows.Forms.Label":
+                        ApplyTheme((Label)c);
+                        break;
+                    case "System.Windows.Forms.ComboBox":
+                        ApplyTheme((ComboBox)c);
+                        break;
+                    case "System.Windows.Forms.GroupBox":
+                        ApplyTheme((GroupBox)c);
+                        break;
+                    case "System.Windows.Forms.TabControl":
+                        ApplyTheme((TabControl)c);
+                        break;
+                    case "System.Windows.Forms.Panel":
+                        ApplyTheme((Panel)c);
+                        break;
+                    case "System.Windows.Forms.MenuStrip":
+                        ApplyTheme((MenuStrip)c);
+                        break;
+                    case "System.Windows.Forms.ContextMenuStrip":
+                        ApplyTheme((ContextMenuStrip)c);
+                        break;
+                }
+            }
+        }
+    }
+}
