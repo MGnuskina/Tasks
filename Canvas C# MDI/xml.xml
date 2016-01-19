@@ -1,38 +1,12 @@
 <?xml version="1.0"?>
 <ArrayOfShapeData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ShapeData>
-    <X>319</X>
-    <Y>60</Y>
-    <Width>216</Width>
-    <Height>103</Height>
+    <X>90</X>
+    <Y>98</Y>
+    <Width>310</Width>
+    <Height>218</Height>
     <LineWidth>2</LineWidth>
-    <Type>Line</Type>
-    <Color>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-    </Color>
-  </ShapeData>
-  <ShapeData>
-    <X>161</X>
-    <Y>91</Y>
-    <Width>135</Width>
-    <Height>83</Height>
-    <LineWidth>2</LineWidth>
-    <Type>Line</Type>
-    <Color>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-    </Color>
-  </ShapeData>
-  <ShapeData>
-    <X>137</X>
-    <Y>37</Y>
-    <Width>147</Width>
-    <Height>47</Height>
-    <LineWidth>2</LineWidth>
-    <Type>Line</Type>
+    <Type>RectangleRound</Type>
     <Color>
       <int>0</int>
       <int>0</int>
