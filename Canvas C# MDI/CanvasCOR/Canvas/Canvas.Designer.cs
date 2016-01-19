@@ -66,6 +66,7 @@
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.tscbLenguage = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.tscbStyle = new System.Windows.Forms.ToolStripComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbType = new System.Windows.Forms.ComboBox();
             this.width = new System.Windows.Forms.ComboBox();
@@ -83,7 +84,6 @@
             this.cmtscmType = new System.Windows.Forms.ToolStripComboBox();
             this.colorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cmtscbWidth = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.menuStrip1.SuspendLayout();
             this.tabControlCanvas.SuspendLayout();
             this.tabPageCanvas1.SuspendLayout();
@@ -282,7 +282,7 @@
             this.toolStripLabel3,
             this.tscbLenguage,
             this.toolStripLabel5,
-            this.toolStripComboBox1});
+            this.tscbStyle});
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
             // 
@@ -378,6 +378,16 @@
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
             resources.ApplyResources(this.toolStripLabel5, "toolStripLabel5");
+            // 
+            // tscbStyle
+            // 
+            this.tscbStyle.Items.AddRange(new object[] {
+            resources.GetString("tscbStyle.Items"),
+            resources.GetString("tscbStyle.Items1"),
+            resources.GetString("tscbStyle.Items2")});
+            this.tscbStyle.Name = "tscbStyle";
+            resources.ApplyResources(this.tscbStyle, "tscbStyle");
+            this.tscbStyle.SelectedIndexChanged += new System.EventHandler(this.tscbStyle_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -543,15 +553,6 @@
             resources.ApplyResources(this.cmtscbWidth, "cmtscbWidth");
             this.cmtscbWidth.SelectedIndexChanged += new System.EventHandler(this.Width_SelectedIndexChanged);
             // 
-            // toolStripComboBox1
-            // 
-            this.toolStripComboBox1.Items.AddRange(new object[] {
-            resources.GetString("toolStripComboBox1.Items"),
-            resources.GetString("toolStripComboBox1.Items1"),
-            resources.GetString("toolStripComboBox1.Items2")});
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            resources.ApplyResources(this.toolStripComboBox1, "toolStripComboBox1");
-            // 
             // CanvasForm
             // 
             resources.ApplyResources(this, "$this");
@@ -641,7 +642,7 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.ToolStripComboBox tscbLenguage;
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripComboBox tscbStyle;
     }
 }
 

@@ -636,16 +636,16 @@
   <data name="toolStripLabel5.Text" xml:space="preserve">
     <value>Style</value>
   </data>
-  <data name="toolStripComboBox1.Items" xml:space="preserve">
+  <data name="tscbStyle.Items" xml:space="preserve">
     <value>Standart</value>
   </data>
-  <data name="toolStripComboBox1.Items1" xml:space="preserve">
+  <data name="tscbStyle.Items1" xml:space="preserve">
     <value>DarkGotic</value>
   </data>
-  <data name="toolStripComboBox1.Items2" xml:space="preserve">
+  <data name="tscbStyle.Items2" xml:space="preserve">
     <value>LightClassic</value>
   </data>
-  <data name="toolStripComboBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tscbStyle.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 28</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
@@ -1440,6 +1440,12 @@
   <data name="&gt;&gt;toolStripLabel5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;tscbStyle.Name" xml:space="preserve">
+    <value>tscbStyle</value>
+  </data>
+  <data name="&gt;&gt;tscbStyle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;cmtscmType.Name" xml:space="preserve">
     <value>cmtscmType</value>
   </data>
@@ -1456,12 +1462,6 @@
     <value>cmtscbWidth</value>
   </data>
   <data name="&gt;&gt;cmtscbWidth.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripComboBox1.Name" xml:space="preserve">
-    <value>toolStripComboBox1</value>
-  </data>
-  <data name="&gt;&gt;toolStripComboBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

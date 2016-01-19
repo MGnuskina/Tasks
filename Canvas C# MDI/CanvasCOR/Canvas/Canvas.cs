@@ -394,5 +394,9 @@ namespace Canvas
             }
         }
 
+        private void tscbStyle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
