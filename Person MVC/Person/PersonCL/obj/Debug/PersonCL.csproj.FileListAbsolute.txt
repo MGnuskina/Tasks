@@ -1,0 +1,10 @@
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\bin\Debug\PersonCL.dll.config
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\bin\Debug\PersonCL.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\bin\Debug\PersonCL.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\bin\Debug\EntityFramework.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\bin\Debug\EntityFramework.xml
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\obj\Debug\PersonCL.csprojResolveAssemblyReference.cache
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\obj\Debug\PersonCL.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\obj\Debug\PersonCL.pdb
