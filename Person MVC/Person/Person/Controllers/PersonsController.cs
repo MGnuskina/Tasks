@@ -15,16 +15,21 @@ namespace Person.Controllers
             return View(repository.GetAll());
         }
 
-        public ActionResult EditPerson()
+        public ActionResult AddPerson()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult EditPerson(PersonCL.Person person)
+        public ActionResult AddPerson(PersonCL.Person person)
         {
             repository.Create(person);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Edit(PersonCL.Person person)
+        {
+            return RedirectToAction("AddPerson", person);
         }
     }
 }

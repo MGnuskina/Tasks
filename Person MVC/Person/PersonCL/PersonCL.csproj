@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IContext.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PersonContextEntitySQL.cs" />
