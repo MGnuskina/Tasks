@@ -65,7 +65,6 @@ namespace Canvas
             //  contextMenuStripRightMouseClick.Enabled = false;
             tscbLenguage.ComboBox.SelectedIndex = 0;
             tscbStyle.ComboBox.SelectedIndex = 0;
-            //listType = new List<string> { "List", "Rectangle", "Elipse", "RoundRectangle", "Fozy" };
             binding.DataSource = data;
             Binding();
         }
