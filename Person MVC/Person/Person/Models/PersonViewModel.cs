@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
 
-namespace PersonCL
+namespace Person.Models
 {
-    [Table("Person")]///??
-    public class Person
+    public class PersonViewModel
     {
         [Key]
-        public int ID { get; set; }//autoIncrement
+        public int Id { get; set; }
         [Required]
         public string FirstName { get; set; }
         [Required]

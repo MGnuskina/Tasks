@@ -16,7 +16,7 @@ namespace Person
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Persons", action = "EditPerson", id = UrlParameter.Optional }//controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

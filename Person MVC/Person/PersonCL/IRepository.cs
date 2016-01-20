@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonClassLibrary
+namespace PersonCL
 {
-    public interface IPersonRepository<T>
+    interface IRepository<T>
     {
         void Create(T item);
         IEnumerable<T> GetAll();
