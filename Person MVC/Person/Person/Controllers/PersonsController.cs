@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AutoMapper;
+using Person.Models;
 
 namespace Person.Controllers
 {
@@ -15,21 +17,23 @@ namespace Person.Controllers
         // GET: Persons
         public ActionResult Index()
         {
-            List<Models.PersonViewModel> per = new List<Models.PersonViewModel>();
+            Mapper.CreateMap<PersonCL.Person, PersonViewModel>();
             List<PersonCL.Person> p = repository.GetAll().ToList();
-            foreach (var pers in p)
-            {
-                per.Add(new Models.PersonViewModel() { Id = pers.ID, Age = pers.Age, FirstName = pers.FirstName, LastName = pers.LastName });
-            }
+            List<PersonViewModel> per = Mapper.Map<List<PersonViewModel>>(p);//new List<Models.PersonViewModel>();
+            //foreach (var pers in p)
+            //{
+            //    per.Add(new Models.PersonViewModel() { Id = pers.ID, Age = pers.Age, FirstName = pers.FirstName, LastName = pers.LastName });
+            //}
             return View(per);
         }
 
         [HttpPost]
-        public ActionResult Index(List<Models.PersonViewModel> per)
+        public ActionResult Index(List<PersonViewModel> per)
         {
-            foreach (Models.PersonViewModel person in per)
+            Mapper.CreateMap<PersonViewModel, PersonCL.Person>();
+            foreach (PersonViewModel person in per)
             {
-                PersonCL.Person p = new PersonCL.Person() { ID = person.Id, Age = person.Age, FirstName = person.FirstName, LastName = person.LastName };
+                PersonCL.Person p = Mapper.Map<PersonCL.Person>(person);//new PersonCL.Person() { ID = person.Id, Age = person.Age, FirstName = person.FirstName, LastName = person.LastName };
                 PersonCL.Person tmpPerson = repository.GetByID(p.ID);
                 if (tmpPerson.Age != p.Age || tmpPerson.FirstName != p.FirstName || tmpPerson.LastName != p.LastName)
                 {
@@ -61,7 +65,7 @@ namespace Person.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Edit(Person.Models.PersonViewModel Person)
+        public ActionResult Edit(PersonViewModel Person)
         {
             //Models.PersonViewModel per = new Models.PersonViewModel() { FirstName = personInUse.FirstName, LastName = personInUse.LastName, Age = personInUse.Age };
             return View(Person);
@@ -83,12 +87,13 @@ namespace Person.Controllers
 
         public ActionResult Delete(PersonCL.Person person)
         {
-            Person.Models.PersonViewModel per = new Models.PersonViewModel() { Id = person.ID, Age = person.Age, FirstName = person.FirstName, LastName = person.LastName };
+            Mapper.CreateMap<PersonCL.Person, PersonViewModel>();
+            PersonViewModel per = Mapper.Map<PersonViewModel>(person);//new Models.PersonViewModel() { Id = person.ID, Age = person.Age, FirstName = person.FirstName, LastName = person.LastName };
             return View(per);
         }
 
         [HttpPost]
-        public ActionResult Delete(Person.Models.PersonViewModel person)
+        public ActionResult Delete(PersonViewModel person)
         {
             repository.Delete(repository.GetByID(person.Id));
             return RedirectToAction("Index");

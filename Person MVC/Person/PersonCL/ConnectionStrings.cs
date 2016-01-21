@@ -8,6 +8,6 @@ namespace PersonCL
 {
     public static class ConnectionStrings
     {
-        public static string Location= @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + @"C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\App_Data\PersonCL.PersonContextEntitySQL.mdf" + ";Integrated Security = True";
+        public static string Location= @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+@"C:\Users\Marusya\Documents\GitHub\Tasks\Person MVC\Person\Person\App_Data\PersonCL.PersonContextEntitySQL.mdf"+";Integrated Security = True";// @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + @"C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\App_Data\PersonCL.PersonContextEntitySQL.mdf" + ";Integrated Security = True";
     }
 }

@@ -74,3 +74,5 @@ C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\Microsoft.Pr
 C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
 C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
 C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Users\Marusya\Documents\GitHub\Tasks\Person MVC\Person\Person\obj\Debug\Person.csprojResolveAssemblyReference.cache
+C:\Users\Marusya\Documents\GitHub\Tasks\Person MVC\Person\Person\obj\Debug\Person.dll
