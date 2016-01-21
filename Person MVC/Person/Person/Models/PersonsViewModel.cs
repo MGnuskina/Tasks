@@ -7,6 +7,6 @@ namespace Person.Models
 {
     public class PersonsViewModel
     {
-        public List<PersonCL.Person> People { get; set; }
+        public IEnumerable<PersonCL.Person> People { get; set; } = new List<PersonCL.Person>();
     }
 }

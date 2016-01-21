@@ -69,3 +69,8 @@ C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\Microsoft.Ow
 C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\obj\Debug\Person.csprojResolveAssemblyReference.cache
 C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\obj\Debug\Person.dll
 C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\obj\Debug\Person.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\GridMvc.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml

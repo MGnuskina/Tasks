@@ -1,35 +1,42 @@
-﻿@model IEnumerable<PersonCL.Person>
- @*Tuple<IEnumerable<PersonCL.Person>,PersonCL.Person>*@
+﻿@model Person.Models.PersonsViewModel
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>People</h2>
-@Html.ActionLink("AddNew", "AddPerson")
-<table class="table">
-    <tr>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model.ToList())
-    {
+@using (Html.BeginForm())
+{
+    <h2>People</h2>
+    @Html.ActionLink("AddNew", "AddPerson")
+    <table class="table">
         <tr>
-            <td>
-                @item.FirstName
-            </td>
-            <td>
-                @item.LastName
-            </td>
-            <td>
-                @item.Age
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit") |
-                @Html.ActionLink("Details", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Edit", new { Id = item.ID })
-            </td>
+            <th></th>
         </tr>
-    }
-</table>
+
+        @foreach (var item in Model.People.ToList())
+        {
+            <tr>
+                <td>
+                    @Html.EditorFor(elemet => item.FirstName)
+                </td>
+                <td>
+                    @Html.EditorFor(elemet => item.LastName)
+                </td>
+                <td>
+                    @Html.EditorFor(elemet => item.Age)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new PersonCL.Person() { ID = item.ID, Age=item.Age, FirstName=item.FirstName, LastName=item.LastName }) |
+                    @Html.ActionLink("Delete", "Delete", new PersonCL.Person() { ID = item.ID, Age = item.Age, FirstName = item.FirstName, LastName = item.LastName }) @*new Person.Models.PersonViewModel() { Person = item })*@
+                </td>
+            </tr>
+        }
+    </table>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save Changes" class="btn btn-default" />
+        </div>
+    </div>
+}

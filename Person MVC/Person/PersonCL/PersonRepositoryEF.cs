@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonCL
 {
-    public class PersonRepository : IRepository<Person>
+    public class PersonRepositoryEF : IRepository<Person>
     {
         PersonContextEntitySQL db = new PersonContextEntitySQL();// conecting to the db using EntityFramework
 

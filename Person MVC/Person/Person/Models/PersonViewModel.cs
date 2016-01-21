@@ -16,5 +16,6 @@ namespace Person.Models
         public string LastName { get; set; }
         [Required]
         public int Age { get; set; }
+        //public PersonCL.Person Person { get; set; }
     }
 }
