@@ -12,7 +12,7 @@ namespace PersonCL
     public class Person
     {
         [Key]
-        public int ID { get; set; }//autoIncrement
+        public int ID { get; set; }
         [Required]
         public string FirstName { get; set; }
         [Required]

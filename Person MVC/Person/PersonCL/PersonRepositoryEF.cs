@@ -8,7 +8,7 @@ namespace PersonCL
 {
     public class PersonRepositoryEF : IRepository<Person>
     {
-        PersonContextEntitySQL db = new PersonContextEntitySQL();// conecting to the db using EntityFramework
+        PersonContextEntitySQL db = new PersonContextEntitySQL();
 
         public void Create(Person item)
         {

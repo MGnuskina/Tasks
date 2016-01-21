@@ -8,40 +8,45 @@ namespace Person.Controllers
 {
     public class PersonsController : Controller
     {
-        //PersonCL.PersonRepositoryEF repository = new PersonCL.PersonRepositoryEF();
+        //PersonCL.PersonRepositoryEF repository = new PersonCL.PersonRepositoryEF();//entity
 
-        PersonCL.PersonRepositoryAdo repository = new PersonCL.PersonRepositoryAdo();
+        PersonCL.PersonRepositoryAdo repository = new PersonCL.PersonRepositoryAdo();//ado
 
         // GET: Persons
         public ActionResult Index()
         {
-            Models.PersonsViewModel per = null;
-            try
+            List<Models.PersonViewModel> per = new List<Models.PersonViewModel>();
+            List<PersonCL.Person> p = repository.GetAll().ToList();
+            foreach (var pers in p)
             {
-                per = new Models.PersonsViewModel() { People = repository.GetAll() };
-            }
-            catch
-            {
-                throw new ArgumentException("The DB can't be found");
+                per.Add(new Models.PersonViewModel() { Id = pers.ID, Age = pers.Age, FirstName = pers.FirstName, LastName = pers.LastName });
             }
             return View(per);
         }
 
         [HttpPost]
-        public ActionResult Index(Models.PersonsViewModel persons)//IEnumerable<PersonCL.Person> persons)
+        public ActionResult Index(List<Models.PersonViewModel> per)
         {
-            try
+            foreach (Models.PersonViewModel person in per)
             {
-                foreach (PersonCL.Person person in persons.People)
+                PersonCL.Person p = new PersonCL.Person() { ID = person.Id, Age = person.Age, FirstName = person.FirstName, LastName = person.LastName };
+                PersonCL.Person tmpPerson = repository.GetByID(p.ID);
+                if (tmpPerson.Age != p.Age || tmpPerson.FirstName != p.FirstName || tmpPerson.LastName != p.LastName)
                 {
-                    repository.Update(person);
+                    tmpPerson = null;
+                    repository.Update(p);
                 }
             }
-            catch
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult SaveAll(List<PersonCL.Person> per)
+        {
+            foreach (PersonCL.Person person in per)
             {
-                throw new ArgumentException();
+                repository.Update(person);
             }
-            return View(repository.GetAll());
+            return RedirectToAction("Index");
         }
 
         public ActionResult AddPerson()
@@ -52,14 +57,7 @@ namespace Person.Controllers
         [HttpPost]
         public ActionResult AddPerson(PersonCL.Person person)
         {
-            try
-            {
-                repository.Create(person);
-            }
-            catch
-            {
-                throw new ArgumentException();
-            }
+            repository.Create(person);
             return RedirectToAction("Index");
         }
 
@@ -85,21 +83,14 @@ namespace Person.Controllers
 
         public ActionResult Delete(PersonCL.Person person)
         {
-            Person.Models.PersonViewModel per = new Models.PersonViewModel() { Id = person.ID, Age=person.Age, FirstName=person.FirstName, LastName=person.LastName };
+            Person.Models.PersonViewModel per = new Models.PersonViewModel() { Id = person.ID, Age = person.Age, FirstName = person.FirstName, LastName = person.LastName };
             return View(per);
         }
 
         [HttpPost]
         public ActionResult Delete(Person.Models.PersonViewModel person)
         {
-            try
-            {
-                repository.Delete(repository.GetByID(person.Id));
-            }
-            catch
-            {
-                throw new ArgumentException();
-            }
+            repository.Delete(repository.GetByID(person.Id));
             return RedirectToAction("Index");
         }
     }

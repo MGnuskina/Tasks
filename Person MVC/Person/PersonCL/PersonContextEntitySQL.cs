@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace PersonCL
 {
-    public class PersonContextEntitySQL: DbContext, IContext
+    public class PersonContextEntitySQL: DbContext
     {
         public DbSet<Person> Persons { get; set; }
     }

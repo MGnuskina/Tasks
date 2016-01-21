@@ -13,7 +13,7 @@ namespace PersonCL
 {
     public class PersonRepositoryAdo : IRepository<Person>
     {
-        static string connectionString = /*"Persist Security Info=False;Integrated Security=true;Initial Catalog=PersonCL.PersonContextEntitySQL;server=(local)";//*/"Data Source=(local); Initial Catalog=PersonCL.PersonContextEntitySQL" + "Data Source=C:\\Users\\Mariya\\Documents\\GitHub\\Tasks\\Person MVC\\Person\\Person\\App_Data\\;";//+"Integrated Security=True";
+        static string connectionString = ConnectionStrings.Location;
         private Database db;
 
         public PersonRepositoryAdo()
@@ -31,33 +31,21 @@ namespace PersonCL
                 db.AddInParameter(command, "LastName", DbType.String, item.LastName);
                 db.AddInParameter(command, "Age", DbType.Int32, item.Age);
                 db.AddInParameter(command, "ID", DbType.Int32, item.ID);
-                using (db.ExecuteReader(command))///???? what is this
-                {
-                    return;
-                }
+                db.ExecuteReader(command);
             }
-            catch
-            {
-
-            }
+            catch{ }
         }
 
-        public void Delete(Person item)////////////??????????????
+        public void Delete(Person item)
         {
             string queryString = "DELETE FROM [Person] WHERE ID LIKE @ID";
             try
             {
                 DbCommand command = db.GetSqlStringCommand(queryString);
                 db.AddInParameter(command, "ID", DbType.Int32, item.ID);
-                using (db.ExecuteReader(command))///???? what is this
-                {
-                    return;
-                }
+                db.ExecuteReader(command);
             }
-            catch
-            {
-
-            }
+            catch {  }
         }
 
         public IEnumerable<Person> GetAll()
@@ -78,12 +66,8 @@ namespace PersonCL
                         Age = reader.GetInt32(3)
                     });
                 }
-                reader.Close();///
             }
-            catch
-            {
-
-            }
+            catch {   }
             return result;
         }
 
@@ -102,10 +86,7 @@ namespace PersonCL
                 result.LastName = (string)reader["LastName"];
                 result.Age = (int)reader["Age"];
             }
-            catch
-            {
-
-            }
+            catch  {    }
             return result;
         }
 
@@ -118,15 +99,10 @@ namespace PersonCL
                 db.AddInParameter(command, "FirstName", DbType.String, item.FirstName);
                 db.AddInParameter(command, "LastName", DbType.String, item.LastName);
                 db.AddInParameter(command, "Age", DbType.Int32, item.Age);
-                using (db.ExecuteReader(command))///???? what is this
-                {
-                    return;
-                }
+                db.AddInParameter(command, "ID", DbType.Int32, item.ID);
+                db.ExecuteReader(command);
             }
-            catch
-            {
-
-            }
+            catch  {     }
         }
     }
 }
