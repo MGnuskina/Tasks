@@ -28,3 +28,5 @@ C:\Users\Marusya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\bin\Debug\Mic
 C:\Users\Marusya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\obj\Debug\PersonCL.csprojResolveAssemblyReference.cache
 C:\Users\Marusya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\obj\Debug\PersonCL.dll
 C:\Users\Marusya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\obj\Debug\PersonCL.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\bin\Debug\AutoMapper.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\PersonCL\bin\Debug\AutoMapper.xml
