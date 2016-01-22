@@ -1,5 +1,6 @@
 ﻿using Microsoft.Practices.EnterpriseLibrary.Data;
 using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
+using PDomain;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonCL
+
+namespace PPersistence
 {
     public class PersonRepositoryAdo : IRepository<Person>
     {

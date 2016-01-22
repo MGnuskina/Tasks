@@ -1,4 +1,4 @@
-﻿@model Person.Models.PersonViewModel
+﻿@model PService.PersonViewModel
 
 @{
     ViewBag.Title = "Delete";
@@ -11,10 +11,13 @@
 <div>
     <dl class="dl-horizontal"></dl>
 
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Delete", "Persons", FormMethod.Post))
     {
         @Html.AntiForgeryToken()
 
+        <div>
+            @Html.HiddenFor(model => model.Id)
+        </div>
         <div class="form-group">
             @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" }):
             @Html.Label(Model.FirstName)
@@ -28,6 +31,16 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-2" }):
             @Html.Label(Model.Age.ToString())
+        </div>
+
+        <div class="form-group">
+            @foreach (var item in Model.PhoneNumbers)
+            {
+                <div>
+                    @Html.LabelFor(element => item.PhoneNumber)
+                    @Html.LabelFor(element => item.PhoneNumberType)
+                </div>
+            }
         </div>
 
         <div class="form-actions no-color">

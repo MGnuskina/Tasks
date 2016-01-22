@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
-namespace Person.Models
+namespace PService
 {
     public class PersonViewModel
     {
@@ -16,6 +13,15 @@ namespace Person.Models
         public string LastName { get; set; }
         [Required]
         public int Age { get; set; }
-        //public PersonCL.Person Person { get; set; }
+
+        //check that it is a phone number!/
+        public List<PhoneNumberViewModel> PhoneNumbers { get; set; }
+
+        //public enum PNTypes ///maybe not here.........
+        //{
+        //    Mobile,
+        //    Work,
+        //    Home
+        //}
     }
 }

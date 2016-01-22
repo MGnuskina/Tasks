@@ -65,6 +65,10 @@
       <HintPath>..\packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MyAutoMapping, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MyAutoMapping.3.0.0\lib\MyAutoMapping.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -193,7 +197,6 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\PersonViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -283,9 +286,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PersonCL\PersonCL.csproj">
+    <ProjectReference Include="..\PersonCL\PService.csproj">
       <Project>{fea486a3-d986-48a0-ba72-d14cba69fc7e}</Project>
-      <Name>PersonCL</Name>
+      <Name>PService</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

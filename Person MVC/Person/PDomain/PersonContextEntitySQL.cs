@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 
-namespace PersonCL
+namespace PDomain
 {
     public class PersonContextEntitySQL: DbContext
     {
         public DbSet<Person> Persons { get; set; }
+        public DbSet<PhoneNumbers> PhoneNumbers { get; set; }
     }
 }

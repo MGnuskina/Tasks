@@ -78,3 +78,9 @@ C:\Users\Marusya\Documents\GitHub\Tasks\Person MVC\Person\Person\obj\Debug\Perso
 C:\Users\Marusya\Documents\GitHub\Tasks\Person MVC\Person\Person\obj\Debug\Person.dll
 C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\AutoMapper.dll
 C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\AutoMapper.xml
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\MyAutoMapping.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\MyAutoMapping.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\PPersistence.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\PDomain.dll
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\PPersistence.pdb
+C:\Users\Mariya\Documents\GitHub\Tasks\Person MVC\Person\Person\bin\PDomain.pdb

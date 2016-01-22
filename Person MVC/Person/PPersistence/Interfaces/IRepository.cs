@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonCL
+namespace PPersistence
 {
-    interface IRepository<T>
+    public interface IRepository<T>
     {
         void Create(T item);
         IEnumerable<T> GetAll();

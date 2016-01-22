@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PersonCL
+namespace PDomain
 {
-    [Table("Person")]///??
+    [Table("Person")]
     public class Person
     {
         [Key]
@@ -19,5 +19,7 @@ namespace PersonCL
         public string LastName { get; set; }
         [Required]
         public int Age { get; set; }
+
+        public virtual List<PhoneNumbers> phonenumbers { get; set; }
     }
 }

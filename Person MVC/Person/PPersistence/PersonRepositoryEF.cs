@@ -1,10 +1,11 @@
-﻿using System;
+﻿using PDomain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonCL
+namespace PPersistence
 {
     public class PersonRepositoryEF : IRepository<Person>
     {
@@ -13,6 +14,13 @@ namespace PersonCL
         public void Create(Person item)
         {
             db.Persons.Add(item);
+            if (item.phonenumbers != null)///
+            {
+                foreach (var pn in item.phonenumbers)
+                {
+                    db.PhoneNumbers.Add(pn);
+                }
+            }
             db.SaveChanges();
         }
 
@@ -24,7 +32,8 @@ namespace PersonCL
 
         public IEnumerable<Person> GetAll()
         {
-            return db.Persons.ToList();
+            IEnumerable<Person> people= db.Persons.ToList();
+            return people;
         }
 
         public Person GetByID(int id)

@@ -3,99 +3,77 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using AutoMapper;
-using Person.Models;
+using PService;
 
 namespace Person.Controllers
 {
     public class PersonsController : Controller
     {
-        //PersonCL.PersonRepositoryEF repository = new PersonCL.PersonRepositoryEF();//entity
+        PersonServices service = new PersonServices();
 
-        PersonCL.PersonRepositoryAdo repository = new PersonCL.PersonRepositoryAdo();//ado
-
-        // GET: Persons
         public ActionResult Index()
         {
-            Mapper.CreateMap<PersonCL.Person, PersonViewModel>();
-            List<PersonCL.Person> p = repository.GetAll().ToList();
-            List<PersonViewModel> per = Mapper.Map<List<PersonViewModel>>(p);//new List<Models.PersonViewModel>();
-            //foreach (var pers in p)
-            //{
-            //    per.Add(new Models.PersonViewModel() { Id = pers.ID, Age = pers.Age, FirstName = pers.FirstName, LastName = pers.LastName });
-            //}
-            return View(per);
+            List<PersonViewModel> people = new List<PersonViewModel>();
+            people = service.ReadAll();
+            return View(people);
         }
 
         [HttpPost]
         public ActionResult Index(List<PersonViewModel> per)
         {
-            Mapper.CreateMap<PersonViewModel, PersonCL.Person>();
-            foreach (PersonViewModel person in per)
+            foreach (var item in per)
             {
-                PersonCL.Person p = Mapper.Map<PersonCL.Person>(person);//new PersonCL.Person() { ID = person.Id, Age = person.Age, FirstName = person.FirstName, LastName = person.LastName };
-                PersonCL.Person tmpPerson = repository.GetByID(p.ID);
-                if (tmpPerson.Age != p.Age || tmpPerson.FirstName != p.FirstName || tmpPerson.LastName != p.LastName)
-                {
-                    tmpPerson = null;
-                    repository.Update(p);
-                }
-            }
-            return RedirectToAction("Index");
-        }
-
-        public ActionResult SaveAll(List<PersonCL.Person> per)
-        {
-            foreach (PersonCL.Person person in per)
-            {
-                repository.Update(person);
+                service.Update(item);
             }
             return RedirectToAction("Index");
         }
 
         public ActionResult AddPerson()
         {
+            PersonViewModel person = new PersonViewModel();
+            List<SelectListItem> li = new List<SelectListItem>();
+            li.Add(new SelectListItem { Text = "Mobile", Value = "Mobile", Selected=true });
+            li.Add(new SelectListItem { Text = "Work", Value = "Work" });
+            li.Add(new SelectListItem { Text = "Home", Value = "Home" });
+            ViewData["numberTypes"] = li;
             return View();
         }
 
         [HttpPost]
-        public ActionResult AddPerson(PersonCL.Person person)
+        public ActionResult AddPerson(PersonViewModel person)
         {
-            repository.Create(person);
+            service.Add(person);
             return RedirectToAction("Index");
         }
 
-        public ActionResult Edit(PersonViewModel Person)
+        public ActionResult Edit(int PersonID)
         {
-            //Models.PersonViewModel per = new Models.PersonViewModel() { FirstName = personInUse.FirstName, LastName = personInUse.LastName, Age = personInUse.Age };
-            return View(Person);
+            PersonViewModel person = service.GetById(PersonID);
+            List<SelectListItem> li = new List<SelectListItem>();
+            li.Add(new SelectListItem { Text = "Mobile", Value = "Mobile", Selected = true });
+            li.Add(new SelectListItem { Text = "Work", Value = "Work" });
+            li.Add(new SelectListItem { Text = "Home", Value = "Home" });
+            ViewData["numberTypes"] = li;
+            return View(person);
         }
 
         [HttpPost]
-        public ActionResult Edit(PersonCL.Person person)
+        public ActionResult Edit(PersonViewModel person)
         {
-            try
-            {
-                repository.Update(person);
-            }
-            catch
-            {
-                throw new ArgumentException("No such field in the DB");
-            }
+            service.Update(person);
             return RedirectToAction("Index");
         }
 
-        public ActionResult Delete(PersonCL.Person person)
+        public ActionResult Delete(int personID)
         {
-            Mapper.CreateMap<PersonCL.Person, PersonViewModel>();
-            PersonViewModel per = Mapper.Map<PersonViewModel>(person);//new Models.PersonViewModel() { Id = person.ID, Age = person.Age, FirstName = person.FirstName, LastName = person.LastName };
+            PersonViewModel per = service.GetById(personID);
             return View(per);
         }
 
         [HttpPost]
         public ActionResult Delete(PersonViewModel person)
         {
-            repository.Delete(repository.GetByID(person.Id));
+            service.Delete(service.GetById(person.Id));
             return RedirectToAction("Index");
         }
     }
