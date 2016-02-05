@@ -11,6 +11,10 @@ namespace PPersistence
     {
         PersonContextEntitySQL db = new PersonContextEntitySQL();
 
+        public PersonRepositoryEF()
+        {
+        }
+
         public void Create(Person item)
         {
             db.Persons.Add(item);
@@ -44,6 +48,17 @@ namespace PPersistence
         public void Update(Person item)
         {
             db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            foreach (var element in item.phonenumbers)
+            {
+                UpdatePhoneNumber(element);
+            }
+            db.SaveChanges();
+        }
+
+        private void UpdatePhoneNumber(PhoneNumbers phone)
+        {
+            db.Entry(phone).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
         }
     }

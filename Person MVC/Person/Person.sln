@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDomain", "PDomain\PDomain.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPersistence", "PPersistence\PPersistence.csproj", "{F24C743F-2957-4F28-B405-09C58727A155}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMockPNUnit", "TestMockPNUnit\TestMockPNUnit.csproj", "{067456C0-086C-46A8-B37F-1405717B7BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonControllerTest", "PersonControllerTest\PersonControllerTest.csproj", "{74FBFD13-FF56-4449-871C-26A9A1F7C102}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{F24C743F-2957-4F28-B405-09C58727A155}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F24C743F-2957-4F28-B405-09C58727A155}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F24C743F-2957-4F28-B405-09C58727A155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74FBFD13-FF56-4449-871C-26A9A1F7C102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74FBFD13-FF56-4449-871C-26A9A1F7C102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74FBFD13-FF56-4449-871C-26A9A1F7C102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74FBFD13-FF56-4449-871C-26A9A1F7C102}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

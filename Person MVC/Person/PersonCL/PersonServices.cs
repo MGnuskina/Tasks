@@ -17,6 +17,12 @@ namespace PService
         {
             repository = new PersonRepositoryEF();
             //repository = new PersonRepositoryAdo();
+            //repository = new PersonRepositoryMongo();
+        }
+
+        public PersonServices(IRepository<PDomain.Person> pr)
+        {
+            repository = pr;
         }
 
         public List<PersonViewModel> ReadAll()
@@ -27,26 +33,54 @@ namespace PService
 
         public PersonViewModel GetById(int id)
         {
-            Person personP = repository.GetByID(id);
-            return ToViewModel(personP);
+            try
+            {
+                Person personP = repository.GetByID(id);
+                return ToViewModel(personP);
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
         }
 
         public void Update(PersonViewModel person)
         {
-            Person personR = FromViewModel(person);
-            repository.Update(personR);
+            try
+            {
+                Person personR = FromViewModel(person);
+                repository.Update(personR);
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
         }
 
         public void Add(PersonViewModel person)
         {
-            Person personR = FromViewModel(person);
-            repository.Create(personR);
+            try
+            {
+                Person personR = FromViewModel(person);
+                repository.Create(personR);
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
         }
 
         public void Delete(PersonViewModel person)
         {
-            Person personR = repository.GetByID(person.Id);
-            repository.Delete(personR);
+            try
+            {
+                Person personR = repository.GetByID(person.Id);
+                repository.Delete(personR);
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
         }
 
         private List<PersonViewModel> ToListViewModel(List<Person> personR)
@@ -54,23 +88,6 @@ namespace PService
             List<PersonViewModel> personVM = new List<PersonViewModel>();
             foreach (var item in personR)///Mapper
             {
-                //PersonViewModel p = new PersonViewModel()
-                //{
-                //    Id = item.ID,
-                //    FirstName = item.FirstName,
-                //    LastName = item.LastName,
-                //    Age = item.Age,
-                //    PhoneNumbers = new List<PhoneNumberViewModel>()
-                //};
-                //foreach (var pn in item.phonenumbers)
-                //{
-                //    p.PhoneNumbers.Add(new PhoneNumberViewModel()
-                //    {
-                //        Id = pn.ID,
-                //        PhoneNumber = pn.PhoneNumber,
-                //        PhoneNumberType = pn.PhoneNumberType
-                //    });
-                //}
                 PersonViewModel p = ToViewModel(item);
                 personVM.Add(p);
             }
@@ -103,22 +120,24 @@ namespace PService
         {
             Person personR = new Person()
             {
-                ID=person.Id,
+                ID = person.Id,
                 FirstName = person.FirstName,
                 LastName = person.LastName,
                 Age = person.Age,
                 phonenumbers = new List<PhoneNumbers>()
             };
-            foreach(var pn in person.PhoneNumbers)
+            foreach (var pn in person.PhoneNumbers)
             {
-                if (pn.PhoneNumberType==null)
+                if (pn.PhoneNumberType == null)
                 {
                     throw new ArgumentException();
                 }
                 personR.phonenumbers.Add(new PhoneNumbers()
                 {
+                    ID = pn.Id,
+                    PersonID = person.Id,
                     PhoneNumber = pn.PhoneNumber,
-                    PhoneNumberType=pn.PhoneNumberType,
+                    PhoneNumberType = pn.PhoneNumberType,
                 });
             }
             return personR;
